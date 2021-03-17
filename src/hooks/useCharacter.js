@@ -7,7 +7,6 @@ export const useCharacter = () => {
 
 
     const movePlayer = (newPosition) => {
-        console.log('🚀 ~ file: useCharacter.js ~ line 8 ~ movePlayer ~ newPosition', newPosition);
         playerPosition.current = newPosition;
     };
 

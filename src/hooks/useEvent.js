@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-import handleKeyPress from './handleKeyPress';
 
-export default function useEvent(event) {
+export default function useEvent(event, handleKeyPress) {
 
     useEffect(() => {
         window.addEventListener(event, handleKeyPress);

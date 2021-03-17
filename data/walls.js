@@ -3,11 +3,11 @@ const WestWall = {
     name: 'Westwall',
     type: 'object',
     position: {
-        x: 800,
-        y: 800,
+        x: -15,
+        y: 0,
     },
     dimension: {
-        x: 50,
+        x: 15,
         y: 1000
     }
 };
