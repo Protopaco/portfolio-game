@@ -10,7 +10,7 @@ export default function handleKeyPress(e, handlePlayerMove, playerPosition) {
 
     const dir = e.key.split('Arrow')[1].toLowerCase();
 
-    const newPosition = changePosition(playerPosition.current, 50, dir);
+    const newPosition = changePosition(playerPosition.current, 10, dir);
 
     const objectArray = [
         ...wallArray

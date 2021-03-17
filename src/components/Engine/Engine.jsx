@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import handleKeyPress from '../../hooks/handleKeyPress';
 import styles from './engine.module.scss';
+import Player from '../Player/Player';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -32,8 +33,10 @@ export default function Engine() {
 
     return (
         <div className={styles.container}>
-            {playerPosition.current.x}
-            {playerPosition.current.y}
+            <Player
+                idle={false}
+                playerPosition={playerPosition}
+            />
         </div>
     );
 }
