@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Player.module.scss';
 
 export default function Player({ idle, playerPosition }) {
-    const [frame, setFrame] = useState(1);
+    const frame = useRef(1);
     const [sprite, setSprite] = useState('/sprites/robo-run/robo-run-1.png');
 
     useEffect(() => {
-        setTimeout(() => {
+        setInterval(() => {
             if (idle.current === true) {
                 idleAnimation();
             } else {
                 runAnimation();
             }
         }, 100);
-    }, [frame, idle]);
+    }, []);
 
     const runAnimation = () => {
-        frame < 4 ? setFrame(frame + 1) : setFrame(1);
-        setSprite(`/sprites/robo-run/robo-run-${frame}.png`);
+        frame.current < 4 ? frame.current = frame.current + 1 : frame.current = 1;
+        setSprite(`/sprites/robo-run/robo-run-${frame.current}.png`);
     };
 
     const idleAnimation = () => {
-        frame < 9 ? setFrame(frame + 1) : setFrame(4);
-        setSprite(`/sprites/robo-idle/robo-idle-${frame}.png`);
+        frame.current < 9 ? frame.current = frame.current + 1 : frame.current = 1;
+        setSprite(`/sprites/robo-idle/robo-idle-${frame.current}.png`);
     };
 
     return (

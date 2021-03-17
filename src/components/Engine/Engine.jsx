@@ -10,7 +10,6 @@ export default function Engine() {
     const { playerPosition, movePlayer } = useCharacter();
     const currentKey = useRef('');
     const idle = useRef(true);
-    const disableKeys = useRef(false);
 
     useEffect(() => {
         window.addEventListener('keydown', (e) => {
@@ -23,17 +22,17 @@ export default function Engine() {
             currentKey.current = e.key;
         });
 
-        const gameLoop = setInterval(() => {
+        setInterval(() => {
             if (currentKey.current) {
+                idle.current = false;
                 handleKeyPress(currentKey.current,
                     handlePlayerMove,
-                    playerPosition,
-                    idle);
+                    playerPosition);
                 currentKey.current = '';
+            } else {
+                idle.current = true;
             }
-        }, 100);
-
-        // return clearInterval(gameLoop);
+        }, 150);
     }, []);
 
     const handlePlayerMove = (newPosition) => {

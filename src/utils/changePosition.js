@@ -1,5 +1,4 @@
 export default function (position, speed, dir) {
-    console.log('🚀 ~ file: changePosition.js ~ line 2 ~ position, speed, dir', position, speed, dir);
 
     switch (dir) {
         case 'up':

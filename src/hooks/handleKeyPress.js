@@ -5,17 +5,11 @@ import { wallArray } from '../../data/walls';
 const playerDimension = { x: 100, y: 100 };
 export default function handleKeyPress(key,
     handlePlayerMove,
-    playerPosition,
-    idle) {
+    playerPosition) {
 
-    setTimeout(() => {
-        idle.current = true;
-    }, 500);
-
-    idle.current = false;
     const dir = key.split('Arrow')[1].toLowerCase();
 
-    const newPosition = changePosition(playerPosition.current, 10, dir);
+    const newPosition = changePosition(playerPosition.current, 15, dir);
 
     const objectArray = [
         ...wallArray
