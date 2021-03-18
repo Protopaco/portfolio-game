@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './Player.module.scss';
+import styles from './Player.scss';
 
 export default function Player({ idle, playerPosition }) {
     const frame = useRef(1);
@@ -27,7 +27,7 @@ export default function Player({ idle, playerPosition }) {
 
     return (
         <div
-            className={styles.char}
+            className={styles.player}
             style={{
                 transform: `translate3d(${playerPosition.current.x}px, ${playerPosition.current.y}px, 0)`
             }}

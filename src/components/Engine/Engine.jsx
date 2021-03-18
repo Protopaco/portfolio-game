@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import handleKeyPress from '../../hooks/handleKeyPress';
-import styles from './Engine.module.scss';
+import styles from './Engine.scss';
 import Player from '../Player/Player';
+import Walls from '../Walls/Walls';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -23,7 +24,7 @@ export default function Engine() {
         });
 
         setInterval(() => {
-            if (currentKey.current) {
+            if (currentKey.current && movementKeys.includes(currentKey.current)) {
                 idle.current = false;
                 handleKeyPress(currentKey.current,
                     handlePlayerMove,
@@ -41,6 +42,7 @@ export default function Engine() {
 
     return (
         <div className={styles.container}>
+            <Walls />
             <Player
                 idle={idle}
                 playerPosition={playerPosition}
