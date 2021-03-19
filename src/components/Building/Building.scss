@@ -1,0 +1,14 @@
+@import "../../scss/Constants.scss";
+
+.building{
+        image-rendering: pixelated;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.name{
+        color: $yellow;
+        font-size: 2em;
+}

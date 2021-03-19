@@ -1,0 +1,7 @@
+@import '../../scss/Constants.scss';
+
+.wall {
+    background-color: $yellow;
+    position: absolute;
+    z-index: 1;
+}
