@@ -10,7 +10,6 @@ export default function handleKeyPress(key,
     const dir = key.split('Arrow')[1].toLowerCase();
 
     const newPosition = changePosition(playerPosition.current, 20, dir);
-    console.log('🚀 ~ file: handleKeyPress.js ~ line 32 ~         ...buildingWallArray', ...buildingWallArray);
 
     const objectArray = [
         ...wallArray,
@@ -27,6 +26,9 @@ export default function handleKeyPress(key,
             handlePlayerMove(newPosition);
             break;
         case 'object':
+            break;
+        case 'portal':
+            console.log(collisionResult);
             break;
     }
 }

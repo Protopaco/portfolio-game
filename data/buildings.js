@@ -3,6 +3,7 @@ import { AboutMeWalls } from './buildings/AboutMe/AboutMeWalls';
 import { Projects } from './buildings/Projects/Projects';
 import { Career } from './buildings/Career/Carrer';
 import { Contact } from './buildings/Contact/Contact';
+import { ContactWalls } from './buildings/Contact/ContactWalls';
 
 
 
@@ -15,6 +16,6 @@ const reducer = (accumulator, walls) => {
 
 export const buildingArray = [AboutMe, Projects, Career, Contact];
 
-const buildingWalls = [AboutMeWalls];
+const buildingWalls = [AboutMeWalls, ContactWalls];
 
 export const buildingWallArray = buildingWalls.reduce(reducer, []);

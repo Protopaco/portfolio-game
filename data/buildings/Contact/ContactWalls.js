@@ -1,9 +1,9 @@
-import { AboutMe } from './AboutMe';
-
+import { Contact } from './Contact';
 const wallLength = 10;
-const { name, position, dimension } = AboutMe;
+const { name, position, dimension } = Contact;
 
-export const AboutMeWalls = [
+
+export const ContactWalls = [
     {
         name: `${name}-NorthWall`,
         type: 'object',
