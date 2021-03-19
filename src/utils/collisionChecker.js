@@ -1,4 +1,6 @@
-export default function checkCollision(objectArray, proposedMove, playerDimension) {
+export default function checkCollision(objectArray,
+    proposedMove,
+    playerDimension) {
     let returnValue = { type: false };
 
     for (const object of objectArray) {

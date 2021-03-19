@@ -7,10 +7,50 @@ const WestWall = {
         y: 0,
     },
     dimension: {
-        x: 15,
-        y: 1000
+        x: 10,
+        y: 800
     }
 };
 
+const NorthWall = {
+    name: 'NorthWall',
+    type: 'object',
+    position: {
+        x: 0,
+        y: 0
+    },
+    dimension: {
+        x: 1250,
+        y: 10
+    }
 
-export const wallArray = [WestWall];
+
+};
+
+const EastWall = {
+    name: 'EastWall',
+    type: 'object',
+    position: {
+        x: 1240,
+        y: 0
+    },
+    dimension: {
+        x: 10,
+        y: 800
+    }
+};
+
+const SouthWall = {
+    name: 'SouthWall',
+    type: 'object',
+    position: {
+        x: 0,
+        y: 800,
+    },
+    dimension: {
+        x: 1250,
+        y: 10
+    }
+};
+
+export const wallArray = [WestWall, NorthWall, EastWall, SouthWall];

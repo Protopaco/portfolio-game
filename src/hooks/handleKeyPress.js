@@ -1,19 +1,20 @@
 import changePosition from '../utils/changePosition';
 import checkCollision from '../utils/collisionChecker';
 import { wallArray } from '../../data/walls';
+import { buildingWallArray } from '../../data/buildings';
 
-const playerDimension = { x: 45, y: 45 };
 export default function handleKeyPress(key,
     handlePlayerMove,
-    playerPosition) {
+    playerPosition, playerDimension) {
 
     const dir = key.split('Arrow')[1].toLowerCase();
 
-    const newPosition = changePosition(playerPosition.current, 15, dir);
-    console.log('🚀 ~ file: handleKeyPress.js ~ line 13 ~ newPosition', newPosition);
+    const newPosition = changePosition(playerPosition.current, 20, dir);
+    console.log('🚀 ~ file: handleKeyPress.js ~ line 32 ~         ...buildingWallArray', ...buildingWallArray);
 
     const objectArray = [
-        ...wallArray
+        ...wallArray,
+        ...buildingWallArray
     ];
 
     const collisionResult = checkCollision(
@@ -24,6 +25,8 @@ export default function handleKeyPress(key,
     switch (collisionResult.type) {
         case false:
             handlePlayerMove(newPosition);
+            break;
+        case 'object':
             break;
     }
 }

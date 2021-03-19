@@ -13,6 +13,7 @@ export default function Player({ idle, playerPosition }) {
                 runAnimation();
             }
         }, 100);
+
     }, []);
 
     const runAnimation = () => {

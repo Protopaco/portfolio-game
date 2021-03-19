@@ -4,11 +4,12 @@ import handleKeyPress from '../../hooks/handleKeyPress';
 import styles from './Engine.scss';
 import Player from '../Player/Player';
 import Walls from '../Walls/Walls';
+import Buildings from '../Buildings/Buildings';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
 export default function Engine() {
-    const { playerPosition, movePlayer } = useCharacter();
+    const { playerPosition, movePlayer, playerDimension } = useCharacter();
     const currentKey = useRef('');
     const idle = useRef(true);
 
@@ -24,14 +25,19 @@ export default function Engine() {
         });
 
         setInterval(() => {
+            let idleTimeout;
             if (currentKey.current && movementKeys.includes(currentKey.current)) {
                 idle.current = false;
                 handleKeyPress(currentKey.current,
                     handlePlayerMove,
-                    playerPosition);
+                    playerPosition,
+                    playerDimension);
                 currentKey.current = '';
+                clearTimeout(idleTimeout);
             } else {
-                idle.current = true;
+                idleTimeout = setTimeout(() => {
+                    idle.current = true;
+                }, 500);
             }
         }, 150);
     }, []);
@@ -47,6 +53,7 @@ export default function Engine() {
                 idle={idle}
                 playerPosition={playerPosition}
             />
+            <Buildings />
         </div>
     );
 }
