@@ -6,7 +6,7 @@ export const Career = {
         y: 100
     },
     dimension: {
-        x: 80,
+        x: 323,
         y: 214
     },
     sprite: '/sprites/building2-blink/building2-blink-',
