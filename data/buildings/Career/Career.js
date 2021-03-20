@@ -9,8 +9,8 @@ export const Career = {
         x: 323,
         y: 214
     },
-    sprite: '/sprites/building2-blink/building2-blink-',
-    spriteNum: 10,
+    sprite: '/sprites/building6/building6-',
+    spriteNum: 54,
     walls: []
 
 };

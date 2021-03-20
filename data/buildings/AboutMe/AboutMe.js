@@ -9,6 +9,6 @@ export const AboutMe = {
         x: 323,
         y: 214
     },
-    sprite: '/sprites/building1-blink/building1-blink-',
-    spriteNum: 4,
+    sprite: '/sprites/building9/building9-',
+    spriteNum: 11,
 };

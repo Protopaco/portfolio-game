@@ -3,11 +3,12 @@ import checkCollision from '../utils/collisionChecker';
 import { wallArray } from '../../data/walls';
 import { buildingWallArray } from '../../data/buildings';
 
-export default function handleKeyPress(key,
+export default function handleKeyPress(
+    dir,
     handlePlayerMove,
-    playerPosition, playerDimension) {
+    playerPosition,
+    playerDimension) {
 
-    const dir = key.split('Arrow')[1].toLowerCase();
 
     const newPosition = changePosition(playerPosition.current, 20, dir);
 

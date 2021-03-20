@@ -9,7 +9,7 @@ export const Contact = {
         x: 323,
         y: 214
     },
-    sprite: '/sprites/building4-blink/building4-blink-',
-    spriteNum: 20,
+    sprite: '/sprites/building5/building5-',
+    spriteNum: 9,
     walls: []
 };
