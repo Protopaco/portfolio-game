@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Projectile from '../components/Projectile/Projectile';
+import { useRef } from 'react';
+import changePosition from '../utils/changePosition';
 
 export const useProjectile = () => {
-    const [projectileArray, setProjectileArray] = useState([]);
+    const projectileArray = useRef([]);
 
     const fireProjectile = (playerPosition,
         playerDimension,
@@ -13,14 +13,25 @@ export const useProjectile = () => {
             y: playerPosition.current.y + (playerDimension.y / 2)
 
         };
-        setProjectileArray([...projectileArray,
-        <Projectile
-            key={`${position.x}${position.y}`}
-            startingPosition={position}
-            direction={playerDirection.current}
-        />
-        ]);
+        const projectile = {
+            position,
+            direction: playerDirection.current
+        };
+
+        projectileArray.current = projectile;
     };
 
-    return { projectileArray, fireProjectile };
+    const updateProjectiles = () => {
+        const { position, direction } = projectileArray.current;
+        const newPosition = changePosition(position, 30, direction);
+
+        projectileArray.current.position = newPosition;
+        return projectileArray.current;
+    };
+
+    return {
+        projectileArray,
+        fireProjectile,
+        updateProjectiles
+    };
 };

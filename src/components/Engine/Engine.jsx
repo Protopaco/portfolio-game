@@ -6,12 +6,23 @@ import styles from './Engine.scss';
 import Player from '../Player/Player';
 import Walls from '../Walls/Walls';
 import Buildings from '../Buildings/Buildings';
+import Projectile from '../Projectile/Projectile';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
 export default function Engine() {
-    const { playerPosition, movePlayer, playerDimension, playerDirection, changeDirection } = useCharacter();
-    const { projectileArray, fireProjectile } = useProjectile();
+    const [currentProjectiles, setCurrentProjectiles] = useState([]);
+    const {
+        playerPosition,
+        movePlayer,
+        playerDimension,
+        playerDirection,
+        changeDirection } = useCharacter();
+
+    const {
+        fireProjectile,
+        updateProjectiles,
+        projectileArray } = useProjectile();
     const currentKey = useRef('');
     const idle = useRef(true);
 
@@ -27,6 +38,8 @@ export default function Engine() {
         });
 
         setInterval(() => {
+            setCurrentProjectiles(updateProjectiles());
+
             let idleTimeout;
             if (currentKey.current &&
                 movementKeys.includes(currentKey.current)) {
@@ -70,7 +83,9 @@ export default function Engine() {
                 playerPosition={playerPosition}
             />
             <Buildings />
-            {projectileArray}
+            <Projectile
+                projectileArray={projectileArray}
+            />
         </div>
     );
 }

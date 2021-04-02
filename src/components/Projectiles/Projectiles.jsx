@@ -1,7 +1,14 @@
-import { useProjectile } from '../../hooks/useProjectile';
+import React from 'react';
+
+import Projectile from '../Projectile/Projectile';
 
 
-export default function Projectiles() {
-    const { projectileArray } = useProjectile();
-    return projectileArray;
+export default function Projectiles({ projectileArray }) {
+
+    return projectileArray.map(projectile =>
+        <Projectile
+            key={projectile.position}
+            position={projectile.position}
+        />
+    );
 }
