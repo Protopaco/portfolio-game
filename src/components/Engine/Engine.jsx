@@ -78,13 +78,13 @@ export default function Engine() {
     return (
         <div className={styles.container}>
             <Walls />
-            <Player
-                idle={idle}
-                playerPosition={playerPosition}
-            />
             <Buildings />
             <Projectile
                 projectileArray={projectileArray}
+            />
+            <Player
+                idle={idle}
+                playerPosition={playerPosition}
             />
         </div>
     );
