@@ -3,7 +3,7 @@ import handleProjectileMovement from './handleProjectileMovement';
 
 export const useProjectile = () => {
     const projectileArray = useRef([]);
-    const dimension = { x: 25, y: 25 };
+    const dimension = { x: 5, y: 5 };
 
     const fireProjectile = (playerPosition,
         playerDimension,

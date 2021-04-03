@@ -2,7 +2,7 @@ export const Contact = {
     name: 'Contact',
     type: 'building',
     position: {
-        x: 200,
+        x: 125,
         y: 100
     },
     dimension: {

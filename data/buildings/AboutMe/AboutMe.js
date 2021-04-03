@@ -2,7 +2,7 @@ export const AboutMe = {
     name: 'About Me',
     type: 'building',
     position: {
-        x: 200,
+        x: 125,
         y: 500,
     },
     dimension: {

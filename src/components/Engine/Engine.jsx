@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
 import handleKeyPress from '../../hooks/handleKeyPress';
@@ -11,7 +11,7 @@ import Projectile from '../Projectile/Projectile';
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
 export default function Engine() {
-    const [currentProjectiles, setCurrentProjectiles] = useState([]);
+    // const [currentProjectiles, setCurrentProjectiles] = useState([]);
     const {
         playerPosition,
         movePlayer,
@@ -38,7 +38,7 @@ export default function Engine() {
         });
 
         setInterval(() => {
-            setCurrentProjectiles(updateProjectiles());
+            updateProjectiles();
 
             let idleTimeout;
             if (currentKey.current &&
