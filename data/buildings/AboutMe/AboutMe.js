@@ -2,13 +2,13 @@ export const AboutMe = {
     name: 'About Me',
     type: 'building',
     position: {
-        x: 200,
+        x: 125,
         y: 500,
     },
     dimension: {
         x: 323,
         y: 214
     },
-    sprite: '/sprites/building1-blink/building1-blink-',
-    spriteNum: 4,
+    sprite: '/sprites/building9/building9-',
+    spriteNum: 11,
 };

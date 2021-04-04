@@ -2,8 +2,11 @@
 
 .header {
     color: $yellow;
-    border-bottom: 3px solid $yellow;
     width: 1250px;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
 }
 .primary{
     font-size: 3em;
@@ -11,3 +14,4 @@
 .secondary{
     font-size: 2em;
 }
+

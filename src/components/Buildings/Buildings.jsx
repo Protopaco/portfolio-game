@@ -1,8 +1,7 @@
 import React from 'react';
-import { buildingArray } from '../../../data/buildings';
 import Building from '../Building/Building';
 
-export default function Buildings() {
+export default function Buildings({ buildingArray }) {
 
     return buildingArray.map(building => {
         return (

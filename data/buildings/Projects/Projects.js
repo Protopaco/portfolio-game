@@ -6,11 +6,11 @@ export const Projects = {
         y: 500
     },
     dimension: {
-        x: 286,
-        y: 190
+        x: 323,
+        y: 214
     },
-    sprite: '/sprites/building3-blink/building3-blink-',
-    spriteNum: 16,
+    sprite: '/sprites/building7/building7-',
+    spriteNum: 18,
     walls: []
 
 };

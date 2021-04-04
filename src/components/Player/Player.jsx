@@ -33,7 +33,6 @@ export default function Player({ idle, playerPosition }) {
                 transform: `translate3d(${playerPosition.current.x}px, ${playerPosition.current.y}px, 0)`
             }}
         >
-            <br />
             <img src={sprite} />
         </div>
     );

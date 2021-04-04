@@ -24,5 +24,7 @@ export default function (position, speed, dir) {
                 x: position.x + speed,
                 y: position.y
             };
+        default:
+            return position;
     }
 }

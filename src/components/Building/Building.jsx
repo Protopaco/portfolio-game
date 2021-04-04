@@ -26,10 +26,10 @@ export default function Building({ building }) {
                 top: building.position.y - 50,
                 left: building.position.x
             }}>
-            <span
+            {/* <span
                 className={styles.name}>
                 {building.name}
-            </span>
+            </span> */}
             <img src={sprite}
                 // className={styles.building}
 

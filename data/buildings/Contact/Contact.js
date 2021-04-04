@@ -2,14 +2,14 @@ export const Contact = {
     name: 'Contact',
     type: 'building',
     position: {
-        x: 200,
+        x: 125,
         y: 100
     },
     dimension: {
-        x: 80,
-        y: 190
+        x: 323,
+        y: 214
     },
-    sprite: '/sprites/building4-blink/building4-blink-',
-    spriteNum: 20,
+    sprite: '/sprites/contact-building2-',
+    spriteNum: 1,
     walls: []
 };

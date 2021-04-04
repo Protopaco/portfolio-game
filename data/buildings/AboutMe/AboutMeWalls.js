@@ -39,5 +39,41 @@ export const AboutMeWalls = [
             x: wallLength,
             y: dimension.y - 60
         }
+    },
+    {
+        name: `${name}-SouthWallEast`,
+        type: 'object',
+        position: {
+            x: position.x,
+            y: position.y + dimension.y - wallLength - 50
+        },
+        dimension: {
+            x: dimension.x / 3,
+            y: wallLength
+        }
+    },
+    {
+        name: `${name}-SouthWallWest`,
+        type: 'object',
+        position: {
+            x: position.x + (dimension.x / 3) * 2,
+            y: position.y + dimension.y - wallLength - 50
+        },
+        dimension: {
+            x: dimension.x / 3,
+            y: wallLength
+        }
+    },
+    {
+        name: `${name}-Portal`,
+        type: 'portal',
+        position: {
+            x: position.x + (dimension.x / 3),
+            y: position.y + dimension.y - wallLength - 100
+        },
+        dimension: {
+            x: dimension.x / 3,
+            y: wallLength
+        }
     }
 ];
