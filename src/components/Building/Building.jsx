@@ -3,7 +3,8 @@ import styles from './Building.scss';
 
 export default function Building({ building }) {
     const frame = useRef(1);
-    const [sprite, setSprite] = useState(`${building.sprite}1.png`);
+    const { sprite, spriteNum, position, dimension, link } = building;
+    const [currentSprite, setCurrentSprite] = useState(`${sprite}1.png`);
 
     useEffect(() => {
         setInterval(() => {
@@ -13,32 +14,28 @@ export default function Building({ building }) {
 
     const buildingAnimation = () => {
 
-        if (frame.current < building.spriteNum) {
+        if (frame.current < spriteNum) {
             frame.current = frame.current + 1;
         } else { frame.current = 1; }
 
-        setSprite(`${building.sprite}${frame.current}.png`);
+        setCurrentSprite(`${sprite}${frame.current}.png`);
     };
 
     return (
         <div className={styles.building}
             style={{
-                top: building.position.y - 50,
-                left: building.position.x
+                top: position.y - 50,
+                left: position.x
             }}>
-            {/* <span
-                className={styles.name}>
-                {building.name}
-            </span> */}
-            <img src={sprite}
-                // className={styles.building}
+            <a href={link}>
+                <img src={currentSprite}
+                    style={{
+                        height: dimension.y,
+                        width: dimension.x
+                    }}
 
-                style={{
-                    height: building.dimension.y,
-                    width: building.dimension.x
-                }}
-
-            />
+                />
+            </a>
         </div>
     );
 }

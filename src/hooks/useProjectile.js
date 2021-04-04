@@ -21,10 +21,14 @@ export const useProjectile = () => {
         projectileArray.current = projectile;
     };
 
-    const updateProjectiles = () => {
+    const updateProjectiles = (buildingWallArray) => {
         const { position, direction } = projectileArray.current;
         if (position) {
-            const newPosition = handleProjectileMovement(direction, position, dimension);
+            const newPosition = handleProjectileMovement(
+                direction,
+                position,
+                dimension,
+                buildingWallArray);
 
             if (newPosition === 'collision') {
                 projectileArray.current = [];

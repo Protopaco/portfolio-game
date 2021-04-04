@@ -25,7 +25,7 @@ export const AboutMeWalls = [
         },
         dimension: {
             x: wallLength,
-            y: dimension.y - 60
+            y: dimension.y
         }
     },
     {
@@ -37,7 +37,7 @@ export const AboutMeWalls = [
         },
         dimension: {
             x: wallLength,
-            y: dimension.y - 60
+            y: dimension.y
         }
     },
     {
@@ -45,7 +45,7 @@ export const AboutMeWalls = [
         type: 'object',
         position: {
             x: position.x,
-            y: position.y + dimension.y - wallLength - 50
+            y: position.y + dimension.y - wallLength
         },
         dimension: {
             x: dimension.x / 3,
@@ -57,7 +57,7 @@ export const AboutMeWalls = [
         type: 'object',
         position: {
             x: position.x + (dimension.x / 3) * 2,
-            y: position.y + dimension.y - wallLength - 50
+            y: position.y + dimension.y - wallLength
         },
         dimension: {
             x: dimension.x / 3,

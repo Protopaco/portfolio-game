@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
-// import { lobbyMap } from '../../../data/maps/lobbyMap';
-// import { contactMap } from '../../../data/maps/contactMap';
 import { useMap } from '../../hooks/useMap';
 import handleKeyPress from '../../hooks/handleKeyPress';
 import styles from './Engine.scss';
@@ -48,7 +46,7 @@ export default function Engine() {
         });
 
         setInterval(() => {
-            updateProjectiles();
+            updateProjectiles(buildingWallArray);
 
             let idleTimeout;
             if (currentKey.current &&

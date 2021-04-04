@@ -11,6 +11,7 @@ export const ContactEmail = {
     },
     sprite: '/sprites/contact-email-',
     spriteNum: 1,
+    link: 'mailto:paul.stevens.developer@gmail.com',
     walls: []
 
 };
