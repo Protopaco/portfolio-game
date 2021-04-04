@@ -1,9 +1,9 @@
-import { Contact } from './Contact';
+import { ContactEmail } from './ContactEmail';
 const wallLength = 10;
-const { name, position, dimension } = Contact;
+const { name, position, dimension } = ContactEmail;
 
 
-export const ContactWalls = [
+export const ContactEmailWalls = [
     {
         name: `${name}-NorthWall`,
         type: 'object',
@@ -64,16 +64,4 @@ export const ContactWalls = [
             y: wallLength
         }
     },
-    {
-        name: `${name}-Portal`,
-        type: 'portal',
-        position: {
-            x: position.x + (dimension.x / 3),
-            y: position.y + dimension.y - wallLength - 120
-        },
-        dimension: {
-            x: dimension.x / 3,
-            y: wallLength
-        }
-    }
 ];

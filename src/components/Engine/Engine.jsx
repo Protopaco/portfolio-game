@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
+// import { lobbyMap } from '../../../data/maps/lobbyMap';
+// import { contactMap } from '../../../data/maps/contactMap';
+import { useMap } from '../../hooks/useMap';
 import handleKeyPress from '../../hooks/handleKeyPress';
 import styles from './Engine.scss';
 import Player from '../Player/Player';
@@ -11,7 +14,7 @@ import Projectile from '../Projectile/Projectile';
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
 export default function Engine() {
-    // const [currentProjectiles, setCurrentProjectiles] = useState([]);
+
     const {
         playerPosition,
         movePlayer,
@@ -23,6 +26,13 @@ export default function Engine() {
         fireProjectile,
         updateProjectiles,
         projectileArray } = useProjectile();
+
+    const {
+        buildingArray,
+        buildingWallArray,
+        changeMap } = useMap(movePlayer);
+
+
     const currentKey = useRef('');
     const idle = useRef(true);
 
@@ -51,7 +61,9 @@ export default function Engine() {
                     dir,
                     handlePlayerMove,
                     playerPosition,
-                    playerDimension);
+                    playerDimension,
+                    changeMap,
+                    buildingWallArray);
                 currentKey.current = '';
                 clearTimeout(idleTimeout);
 
@@ -78,13 +90,15 @@ export default function Engine() {
     return (
         <div className={styles.container}>
             <Walls />
-            <Buildings />
-            <Projectile
-                projectileArray={projectileArray}
-            />
             <Player
                 idle={idle}
                 playerPosition={playerPosition}
+            />
+            <Buildings
+                buildingArray={buildingArray}
+            />
+            <Projectile
+                projectileArray={projectileArray}
             />
         </div>
     );
