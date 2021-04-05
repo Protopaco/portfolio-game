@@ -13,6 +13,7 @@ export const ContactGithub = {
         ['Github:'],
         ['/protopaco']
     ],
+    fontSize: '1em',
     link: 'https://github.com/Protopaco'
 
 };

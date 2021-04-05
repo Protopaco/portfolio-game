@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { lobbyMap } from '../../data/maps/lobbyMap';
 import { contactMap } from '../../data/maps/contactMap';
+import { aboutMeMap } from '../../data/maps/aboutMeMap';
 
 
 export const useMap = (movePlayer, resetEye) => {
@@ -28,6 +29,16 @@ export const useMap = (movePlayer, resetEye) => {
                 setEyeStarting(contactMap.eyePosition);
                 setBackButton(contactMap.BackButton);
                 break;
+
+            case 'About-Me-Portal':
+                movePlayer(aboutMeMap.playerPosition);
+                buildingWallArray.current = aboutMeMap.buildingWallArray;
+                setBuildingArray(aboutMeMap.buildingArray);
+                resetEye(aboutMeMap.eyePosition);
+                setEyeStarting(aboutMeMap.eyePosition);
+                setBackButton(aboutMeMap.BackButton);
+                break;
+
         }
     };
 

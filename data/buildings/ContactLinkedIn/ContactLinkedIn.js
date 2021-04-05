@@ -13,6 +13,7 @@ export const ContactLinkedIn = {
         ['LinkedIn:'],
         ['/paul-stevens-dev']
     ],
+    fontSize: '1em',
     link: 'https://www.linkedin.com/in/paul-stevens-dev/'
 
 };

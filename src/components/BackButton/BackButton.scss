@@ -3,11 +3,10 @@
 .button{
     position: absolute;
     border: 2px solid $yellow;
-    background-color: $darkBlue;
     color: $yellow;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     font-size: 2em;
     cursor: pointer;
 }

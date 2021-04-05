@@ -9,7 +9,8 @@ export default function Building({ building }) {
         position,
         dimension,
         link,
-        wordArrays } = building;
+        wordArrays,
+        fontSize } = building;
 
     const [currentSprite, setCurrentSprite] = useState(`${sprite}1.png`);
 
@@ -49,7 +50,8 @@ export default function Building({ building }) {
                         className={styles.textcontainer}
                         style={{
                             width: dimension.x,
-                            height: dimension.y
+                            height: dimension.y,
+                            fontSize
                         }}
                     >
                         {wordArrays.map(line => <Line

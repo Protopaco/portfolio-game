@@ -11,8 +11,9 @@ export const ContactPhone = {
     },
     wordArrays: [
         ['Phone:'],
-        ['(360) 317-6607)']
+        ['(360) 317-6607']
     ],
+    fontSize: '1em',
     link: 'tel:3603176607'
 
 };

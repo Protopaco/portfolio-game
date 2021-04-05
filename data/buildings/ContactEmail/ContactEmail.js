@@ -13,6 +13,7 @@ export const ContactEmail = {
         ['Email', ':'],
         ['paul.stevens.developer@gmail.com']
     ],
+    fontSize: '1em',
     link: 'mailto:paul.stevens.developer@gmail.com'
 
 };

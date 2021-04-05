@@ -10,7 +10,6 @@
 
 .name{
         color: $yellow;
-        font-size: 2em;
 }
 
 a{
@@ -24,5 +23,5 @@ a{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 15px;
+        padding: 15px;
 }

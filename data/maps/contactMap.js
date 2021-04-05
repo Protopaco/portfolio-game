@@ -6,15 +6,16 @@ import { ContactPhone } from '../buildings/ContactPhone/ContactPhone';
 const BackButton = {
     name: 'Back Button',
     type: 'building',
-    position: { x: 1080, y: 20 },
-    dimension: { x: 150, y: 50 },
+    position: { x: 1150, y: 30 },
+    dimension: { x: 70, y: 70 },
 };
 
 const buildingArray = [
     ContactPhone,
     ContactEmail,
     ContactLinkedIn,
-    ContactGithub, BackButton];
+    ContactGithub,
+    BackButton];
 
 
 

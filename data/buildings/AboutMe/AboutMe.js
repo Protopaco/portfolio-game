@@ -1,5 +1,5 @@
 export const AboutMe = {
-    name: 'About Me',
+    name: 'About-Me',
     type: 'building',
     position: {
         x: 120,
