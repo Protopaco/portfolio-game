@@ -2,18 +2,17 @@ export const ContactEmail = {
     name: 'Email',
     type: 'building',
     position: {
-        x: 120,
-        y: 100
+        x: 675,
+        y: 275
     },
     dimension: {
-        x: 500,
+        x: 450,
         y: 90
     },
     wordArrays: [
         ['Email', ':'],
         ['paul.stevens.developer@gmail.com']
     ],
-    spriteNum: 1,
-    link: 'mailto:paul.stevens.developer@gmail.com',
+    link: 'mailto:paul.stevens.developer@gmail.com'
 
 };

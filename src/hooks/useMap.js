@@ -4,29 +4,29 @@ import { contactMap } from '../../data/maps/contactMap';
 
 
 export const useMap = (movePlayer, resetEye) => {
-    const [currentMap, setCurrentMap] = useState(lobbyMap);
     const [buildingArray, setBuildingArray] = useState(lobbyMap.buildingArray);
     const buildingWallArray = useRef(lobbyMap.buildingWallArray);
     const [eyeStarting, setEyeStarting] = useState(lobbyMap.eyePosition);
+    const [backButton, setBackButton] = useState(null);
 
     const changeMap = ({ name }) => {
         console.log(name);
         switch (name) {
             case 'Lobby-Portal':
-                setCurrentMap(lobbyMap);
                 movePlayer(lobbyMap.playerPosition);
                 buildingWallArray.current = lobbyMap.buildingWallArray;
                 setBuildingArray(lobbyMap.buildingArray);
                 resetEye(lobbyMap.eyePosition);
                 setEyeStarting(lobbyMap.eyePosition);
+                setBackButton(null);
                 break;
             case 'Contact-Portal':
-                setCurrentMap(contactMap);
                 movePlayer(contactMap.playerPosition);
                 buildingWallArray.current = contactMap.buildingWallArray;
                 setBuildingArray(contactMap.buildingArray);
                 resetEye(contactMap.eyePosition);
                 setEyeStarting(contactMap.eyePosition);
+                setBackButton(contactMap.BackButton);
                 break;
         }
     };
@@ -36,6 +36,7 @@ export const useMap = (movePlayer, resetEye) => {
         buildingWallArray,
         buildingArray,
         eyeStarting,
-        changeMap
+        changeMap,
+        backButton
     };
 };

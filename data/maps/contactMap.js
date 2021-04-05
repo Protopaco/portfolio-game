@@ -1,19 +1,22 @@
 import { ContactEmail } from '../buildings/ContactEmail/ContactEmail';
-import { ContactEmailWalls } from '../buildings/ContactEmail/ContactEmailWalls';
+import { ContactGithub } from '../buildings/ContactGithub/ContactGithub';
+import { ContactLinkedIn } from '../buildings/ContactLinkedIn/ContactLinkedIn';
+import { ContactPhone } from '../buildings/ContactPhone/ContactPhone';
 
-
-const reducer = (accumulator, walls) => {
-    if (walls.length > 0) {
-        accumulator.push(...walls);
-    }
-    return accumulator;
+const BackButton = {
+    name: 'Back Button',
+    type: 'building',
+    position: { x: 1080, y: 20 },
+    dimension: { x: 150, y: 50 },
 };
 
-const buildingArray = [ContactEmail];
+const buildingArray = [
+    ContactPhone,
+    ContactEmail,
+    ContactLinkedIn,
+    ContactGithub, BackButton];
 
-const buildingWallArray = [ContactEmail];
 
-// const buildingWallArray = buildingWalls.reduce(reducer, []);
 
 const playerPosition =
 {
@@ -28,8 +31,9 @@ const eyePosition =
 };
 
 export const contactMap = {
-    buildingWallArray,
+    buildingWallArray: buildingArray,
     buildingArray,
     playerPosition,
-    eyePosition
+    eyePosition,
+    BackButton
 };

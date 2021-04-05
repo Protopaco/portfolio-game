@@ -34,7 +34,7 @@ export default function Building({ building }) {
                 top: position.y,
                 left: position.x
             }}>
-            <a href={link}>
+            <a href={link} target="_blank" rel="noopener noreferrer">
                 {sprite ?
                     <img src={currentSprite}
                         style={{

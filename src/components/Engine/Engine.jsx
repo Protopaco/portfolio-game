@@ -10,6 +10,7 @@ import Walls from '../Walls/Walls';
 import Buildings from '../Buildings/Buildings';
 import Projectile from '../Projectile/Projectile';
 import Eye from '../Eye/Eye';
+import BackButton from '../BackButton/BackButton';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -39,7 +40,8 @@ export default function Engine() {
         buildingArray,
         buildingWallArray,
         changeMap,
-        eyeStarting } = useMap(movePlayer, resetEye);
+        eyeStarting,
+        backButton } = useMap(movePlayer, resetEye);
 
     const currentKey = useRef('');
     const idle = useRef(true);
@@ -103,6 +105,10 @@ export default function Engine() {
         }, 150);
     }, []);
 
+    const handleBackButton = () => {
+        changeMap({ name: 'Lobby-Portal' });
+    };
+
     return (
         <div className={styles.container}>
             <Walls />
@@ -118,7 +124,12 @@ export default function Engine() {
                     buildingArray={buildingArray}
                 />
                 : null}
-
+            {backButton ?
+                <BackButton
+                    position={backButton.position}
+                    dimension={backButton.dimension}
+                    handleBackButton={handleBackButton} />
+                : null}
             <Projectile
                 projectileArray={projectileArray}
             />
