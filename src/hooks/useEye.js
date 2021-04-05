@@ -5,6 +5,7 @@ export const useEye = () => {
     const eyeDimension = { x: 24, y: 54 };
     const eyePosition = useRef({ x: 50, y: 50 });
 
+
     const updateEye = (buildingWallArray, playerPosition) => {
 
         const newPosition = handleEyeMovement(
@@ -18,8 +19,15 @@ export const useEye = () => {
         }
     };
 
+    const resetEye = (newPosition) => {
+        console.log('I\'ve been shot!');
+        eyePosition.current = newPosition;
+    };
+
     return {
         eyePosition,
-        updateEye
+        eyeDimension,
+        updateEye,
+        resetEye
     };
 };

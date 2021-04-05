@@ -21,8 +21,15 @@ const playerPosition =
     y: 400
 };
 
+const eyePosition =
+{
+    x: 50,
+    y: 50
+};
+
 export const contactMap = {
     buildingWallArray,
     buildingArray,
-    playerPosition
+    playerPosition,
+    eyePosition
 };

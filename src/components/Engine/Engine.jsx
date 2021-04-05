@@ -27,16 +27,19 @@ export default function Engine() {
         updateProjectiles,
         projectileArray } = useProjectile();
 
-    const {
-        buildingArray,
-        buildingWallArray,
-        changeMap } = useMap(movePlayer);
 
     const {
         eyePosition,
-        updateEye
+        eyeDimension,
+        updateEye,
+        resetEye
     } = useEye(eyePosition);
 
+    const {
+        buildingArray,
+        buildingWallArray,
+        changeMap,
+        eyeStarting } = useMap(movePlayer, resetEye);
 
     const currentKey = useRef('');
     const idle = useRef(true);
@@ -53,7 +56,18 @@ export default function Engine() {
         });
 
         setInterval(() => {
-            updateProjectiles(buildingWallArray);
+            const eyeCollision = {
+                position: eyePosition.current,
+                dimension: eyeDimension,
+                type: 'npc',
+                name: 'eye'
+            };
+
+            updateProjectiles(
+                buildingWallArray,
+                eyeCollision,
+                resetEye,
+                eyeStarting);
             updateEye(buildingWallArray, playerPosition);
 
             let idleTimeout;

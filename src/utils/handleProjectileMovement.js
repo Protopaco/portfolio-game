@@ -7,13 +7,18 @@ export default function handleProjectileMovement(
     direction,
     position,
     dimension,
-    buildingWallArray) {
+    buildingWallArray,
+    eyeCollision,
+    resetEye,
+    eyeStarting) {
+
 
     const newPosition = changePosition(position, projectileSpeed, direction);
 
     const objectArray = [
         ...wallArray,
-        ...buildingWallArray.current
+        ...buildingWallArray.current,
+        eyeCollision
     ];
 
     const collisionResult = checkCollision(
@@ -28,5 +33,7 @@ export default function handleProjectileMovement(
             return 'collision';
         case 'portal':
             return newPosition;
+        case 'npc':
+            resetEye(eyeStarting);
     }
 }

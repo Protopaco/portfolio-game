@@ -20,9 +20,16 @@ const playerPosition =
     y: 400
 };
 
+const eyePosition =
+{
+    x: 50,
+    y: 50
+};
+
 
 export const lobbyMap = {
     buildingWallArray,
     buildingArray,
-    playerPosition
+    playerPosition,
+    eyePosition
 };
