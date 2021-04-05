@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import handleProjectileMovement from './handleProjectileMovement';
+import handleProjectileMovement from '../utils/handleProjectileMovement';
 
 export const useProjectile = () => {
     const projectileArray = useRef([]);

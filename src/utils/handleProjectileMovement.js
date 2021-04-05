@@ -1,5 +1,5 @@
-import changePosition from '../utils/changePosition';
-import checkCollision from '../utils/collisionChecker';
+import changePosition from './changePosition';
+import checkCollision from './collisionChecker';
 import { wallArray } from '../../data/walls';
 const projectileSpeed = 25;
 
@@ -25,7 +25,6 @@ export default function handleProjectileMovement(
         case false:
             return newPosition;
         case 'object':
-            console.log(collisionResult);
             return 'collision';
         case 'portal':
             return newPosition;

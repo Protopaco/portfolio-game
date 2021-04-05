@@ -2,12 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
 import { useMap } from '../../hooks/useMap';
+import { useEye } from '../../hooks/useEye';
 import handleKeyPress from '../../hooks/handleKeyPress';
 import styles from './Engine.scss';
 import Player from '../Player/Player';
 import Walls from '../Walls/Walls';
 import Buildings from '../Buildings/Buildings';
 import Projectile from '../Projectile/Projectile';
+import Eye from '../Eye/Eye';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -30,6 +32,11 @@ export default function Engine() {
         buildingWallArray,
         changeMap } = useMap(movePlayer);
 
+    const {
+        eyePosition,
+        updateEye
+    } = useEye(eyePosition);
+
 
     const currentKey = useRef('');
     const idle = useRef(true);
@@ -47,6 +54,7 @@ export default function Engine() {
 
         setInterval(() => {
             updateProjectiles(buildingWallArray);
+            updateEye(buildingWallArray, playerPosition);
 
             let idleTimeout;
             if (currentKey.current &&
@@ -84,6 +92,9 @@ export default function Engine() {
     return (
         <div className={styles.container}>
             <Walls />
+            <Eye
+                eyePosition={eyePosition}
+            />
             <Player
                 idle={idle}
                 playerPosition={playerPosition}
