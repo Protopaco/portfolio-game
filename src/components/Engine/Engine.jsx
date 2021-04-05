@@ -57,7 +57,7 @@ export default function Engine() {
                 idle.current = false;
                 handleKeyPress(
                     dir,
-                    handlePlayerMove,
+                    movePlayer,
                     playerPosition,
                     playerDimension,
                     changeMap,
@@ -80,10 +80,6 @@ export default function Engine() {
             }
         }, 150);
     }, []);
-
-    const handlePlayerMove = (newPosition) => {
-        movePlayer(newPosition);
-    };
 
     return (
         <div className={styles.container}>

@@ -24,7 +24,7 @@ export default function Building({ building }) {
     return (
         <div className={styles.building}
             style={{
-                top: position.y - 50,
+                top: position.y,
                 left: position.x
             }}>
             <a href={link}>

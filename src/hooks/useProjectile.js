@@ -3,15 +3,15 @@ import handleProjectileMovement from './handleProjectileMovement';
 
 export const useProjectile = () => {
     const projectileArray = useRef([]);
-    const dimension = { x: 5, y: 5 };
+    const dimension = { x: 15, y: 15 };
 
     const fireProjectile = (playerPosition,
         playerDimension,
         playerDirection) => {
 
         const position = {
-            x: playerPosition.current.x - (playerDimension.x / 2),
-            y: playerPosition.current.y,
+            x: playerPosition.current.x + (playerDimension.x / 2),
+            y: playerPosition.current.y + (playerDimension.y / 2),
         };
         const projectile = {
             position,

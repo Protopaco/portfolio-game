@@ -1,7 +1,7 @@
 import changePosition from '../utils/changePosition';
 import checkCollision from '../utils/collisionChecker';
 import { wallArray } from '../../data/walls';
-
+const projectileSpeed = 25;
 
 export default function handleProjectileMovement(
     direction,
@@ -9,7 +9,7 @@ export default function handleProjectileMovement(
     dimension,
     buildingWallArray) {
 
-    const newPosition = changePosition(position, 20, direction);
+    const newPosition = changePosition(position, projectileSpeed, direction);
 
     const objectArray = [
         ...wallArray,
@@ -20,12 +20,12 @@ export default function handleProjectileMovement(
         objectArray,
         newPosition,
         dimension);
-    console.log('🚀 ~ file: handleProjectileMovement.js ~ line 22 ~ collisionResult', collisionResult);
 
     switch (collisionResult.type) {
         case false:
             return newPosition;
         case 'object':
+            console.log(collisionResult);
             return 'collision';
         case 'portal':
             return newPosition;
