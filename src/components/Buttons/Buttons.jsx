@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import simulateKeyPress from '../../utils/simulateKeyPress';
+import { simulateKeyPress, simulateKeyUp, simulateSingleKeyPress } from '../../utils/simulateKeyPress';
 import styles from './Buttons.scss';
 
 export default function Buttons() {
@@ -29,7 +29,8 @@ export default function Buttons() {
         <div className={styles.directions}>
             <span className={styles.button}
                 id={styles[selectedButton === 'ArrowLeft' ? 'selected' : null]}
-                onClick={() => simulateKeyPress('ArrowLeft')}>
+                onMouseDown={() => simulateKeyPress('ArrowLeft')}
+                onMouseUp={() => simulateKeyUp()}>
                 <img
                     className={styles.arrow}
                     src={'/arrows/LeftArrow.png'}
@@ -37,8 +38,8 @@ export default function Buttons() {
             </span>
             <span className={styles.button}
                 id={styles[selectedButton === 'ArrowRight' ? 'selected' : null]}
-
-                onClick={() => simulateKeyPress('ArrowRight')}>
+                onMouseDown={() => simulateKeyPress('ArrowRight')}
+                onMouseUp={() => simulateKeyUp()}>
                 <img
                     className={styles.arrow}
                     src={'/arrows/RightArrow.png'}
@@ -46,8 +47,9 @@ export default function Buttons() {
             </span>
             <span className={styles.button}
                 id={styles[selectedButton === 'ArrowUp' ? 'selected' : null]}
+                onMouseDown={() => simulateKeyPress('ArrowUp')}
+                onMouseUp={() => simulateKeyUp()}>
 
-                onClick={() => simulateKeyPress('ArrowUp')}>
                 <img
                     className={styles.arrow}
                     src={'/arrows/UpArrow.png'}
@@ -55,8 +57,9 @@ export default function Buttons() {
             </span>
             <span className={styles.button}
                 id={styles[selectedButton === 'ArrowDown' ? 'selected' : null]}
+                onMouseDown={() => simulateKeyPress('ArrowDown')}
+                onMouseUp={() => simulateKeyUp()}>
 
-                onClick={() => simulateKeyPress('ArrowDown')}>
                 <img className={styles.arrow}
                     src={'/arrows/DownArrow.png'}
                     alt="Down arrow" />
@@ -64,7 +67,7 @@ export default function Buttons() {
             <span className={styles.space}
                 id={styles[selectedButton === ' ' ? 'selected' : null]}
 
-                onClick={() => simulateKeyPress(' ')}>
+                onClick={() => simulateSingleKeyPress(' ')}>
                 {'SPACE'}
             </span>
         </div >

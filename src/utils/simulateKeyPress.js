@@ -1,7 +1,20 @@
 
-export default function simulateKeyPress(direction) {
+let interval;
+export function simulateKeyPress(direction) {
 
-    const keyEvent = new KeyboardEvent('keydown', { key: direction });
+    interval = setInterval(() => {
+        const keyEvent = new KeyboardEvent('keydown', { key: direction });
+
+        window.dispatchEvent(keyEvent);
+    }, 50);
+}
+
+export function simulateKeyUp() {
+    clearInterval(interval);
+}
+
+export function simulateSingleKeyPress(key) {
+    const keyEvent = new KeyboardEvent('keydown', { key });
 
     window.dispatchEvent(keyEvent);
 }
