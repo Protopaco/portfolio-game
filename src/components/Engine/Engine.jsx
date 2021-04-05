@@ -113,9 +113,12 @@ export default function Engine() {
                 idle={idle}
                 playerPosition={playerPosition}
             />
-            <Buildings
-                buildingArray={buildingArray}
-            />
+            {buildingArray ?
+                <Buildings
+                    buildingArray={buildingArray}
+                />
+                : null}
+
             <Projectile
                 projectileArray={projectileArray}
             />

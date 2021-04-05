@@ -11,9 +11,9 @@ const reducer = (accumulator, walls) => {
 
 const buildingArray = [ContactEmail];
 
-const buildingWalls = [ContactEmailWalls];
+const buildingWallArray = [ContactEmail];
 
-const buildingWallArray = buildingWalls.reduce(reducer, []);
+// const buildingWallArray = buildingWalls.reduce(reducer, []);
 
 const playerPosition =
 {

@@ -12,3 +12,17 @@
         color: $yellow;
         font-size: 2em;
 }
+
+a{
+        text-decoration: none;
+}
+
+.textcontainer {
+        border: 2px solid $yellow;
+        background-color: $midBlue;
+        color: $background;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 15px;
+}

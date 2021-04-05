@@ -20,7 +20,6 @@ export const useEye = () => {
     };
 
     const resetEye = (newPosition) => {
-        console.log('I\'ve been shot!');
         eyePosition.current = newPosition;
     };
 

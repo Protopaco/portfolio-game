@@ -2,16 +2,18 @@ export const ContactEmail = {
     name: 'Email',
     type: 'building',
     position: {
-        x: 125,
+        x: 120,
         y: 100
     },
     dimension: {
         x: 500,
-        y: 89
+        y: 90
     },
-    sprite: '/sprites/contact-email-',
+    wordArrays: [
+        ['Email', ':'],
+        ['paul.stevens.developer@gmail.com']
+    ],
     spriteNum: 1,
     link: 'mailto:paul.stevens.developer@gmail.com',
-    walls: []
 
 };
