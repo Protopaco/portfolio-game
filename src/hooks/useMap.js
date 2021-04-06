@@ -3,6 +3,7 @@ import { lobbyMap } from '../../data/maps/lobbyMap';
 import { contactMap } from '../../data/maps/contactMap';
 import { aboutMeMap } from '../../data/maps/aboutMeMap';
 import { careerMap } from '../../data/maps/careerMap';
+import { projectsMap } from '../../data/maps/projectsMap';
 
 
 export const useMap = (movePlayer, resetEye) => {
@@ -46,6 +47,14 @@ export const useMap = (movePlayer, resetEye) => {
                 resetEye(careerMap.eyePosition);
                 eyeStarting.current = careerMap.eyePosition;
                 setBackButton(careerMap.BackButton);
+                break;
+            case 'Projects-Portal':
+                movePlayer(projectsMap.playerPosition);
+                buildingWallArray.current = projectsMap.buildingWallArray;
+                setBuildingArray(projectsMap.buildingArray);
+                resetEye(projectsMap.eyePosition);
+                eyeStarting.current = projectsMap.eyePosition;
+                setBackButton(projectsMap.BackButton);
                 break;
 
         }

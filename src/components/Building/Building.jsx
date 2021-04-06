@@ -38,7 +38,9 @@ export default function Building({ building, handlePopup }) {
             }}
             onClick={() => handlePopup(popup)}
         >
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a href={link}
+                target="_blank"
+                rel="noopener noreferrer">
                 {sprite ?
                     <img src={currentSprite}
                         style={{

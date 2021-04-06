@@ -1,11 +1,5 @@
 import { AboutMeBlock } from '../buildings/AboutMeBlock/AboutMeBlock';
-
-const BackButton = {
-    name: 'Back Button',
-    type: 'building',
-    position: { x: 1150, y: 30 },
-    dimension: { x: 70, y: 70 },
-};
+import { BackButton } from '../buildings/BackButton/BackButton';
 
 const buildingArray = [AboutMeBlock, BackButton];
 

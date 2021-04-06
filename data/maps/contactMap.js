@@ -3,13 +3,7 @@ import { ContactGithub } from '../buildings/ContactGithub/ContactGithub';
 import { ContactLinkedIn } from '../buildings/ContactLinkedIn/ContactLinkedIn';
 import { ContactPhone } from '../buildings/ContactPhone/ContactPhone';
 import { Resume } from '../buildings/Resume/Resume';
-
-const BackButton = {
-    name: 'Back Button',
-    type: 'building',
-    position: { x: 1150, y: 30 },
-    dimension: { x: 70, y: 70 },
-};
+import { BackButton } from '../buildings/BackButton/BackButton';
 
 const buildingArray = [
     ContactPhone,

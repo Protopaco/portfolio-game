@@ -2,13 +2,8 @@ import { NightLight } from '../buildings/NightLight/NightLight';
 import { DragBrunch } from '../buildings/DragBrunch/DragBrunch';
 import { TacoHouse } from '../buildings/TacoHouse/TacoHouse';
 import { Pablitos } from '../buildings/Pablitos/Pablitos';
+import { BackButton } from '../buildings/BackButton/BackButton';
 
-const BackButton = {
-    name: 'Back Button',
-    type: 'building',
-    position: { x: 1150, y: 30 },
-    dimension: { x: 70, y: 70 },
-};
 
 const buildingArray = [BackButton, NightLight, DragBrunch, TacoHouse, Pablitos];
 
