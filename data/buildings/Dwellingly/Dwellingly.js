@@ -2,18 +2,19 @@ export const Dwellingly = {
     name: 'Dwellingly',
     type: 'building',
     position: {
-        x: 300,
-        y: 670
+        x: 370,
+        y: 460
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Dwellingly'],
         ['React, Python'],
-        ['Code For PDX Project']
+        ['Code For PDX']
     ],
+    fontSize: '.7em',
     popup: {
         title: 'Dwellingly',
         text: [

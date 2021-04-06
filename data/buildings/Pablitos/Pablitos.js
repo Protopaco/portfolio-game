@@ -2,19 +2,19 @@ export const Pablitos = {
     name: 'Pablitos',
     type: 'building',
     position: {
-        x: 300,
-        y: 640
+        x: 370,
+        y: 460
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Owner'],
         ['Pablito\'s Taqueria'],
         ['2008 - 2015']
     ],
-    fontSize: '1em',
+    fontSize: '.7em',
     popup: {
         title: 'Pablito\'s Taqueria',
         text: [

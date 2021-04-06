@@ -10,7 +10,7 @@ const buildingArray = [BackButton, NightLight, DragBrunch, TacoHouse, Pablitos];
 const playerPosition =
 {
     x: 1125,
-    y: 700
+    y: 500
 };
 
 const eyePosition =
@@ -19,7 +19,7 @@ const eyePosition =
     y: 50
 };
 
-const marqueeText = 'Look at all of my cool experiences! Shoot the boxes to interact.   ';
+const marqueeText = 'Look at all of my cool experience! Shoot or click the boxes to find out more!   ';
 
 
 export const careerMap = {

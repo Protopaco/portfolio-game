@@ -2,18 +2,19 @@ export const LovingMonsters = {
     name: 'LovingMonsters',
     type: 'building',
     position: {
-        x: 300,
-        y: 460
+        x: 370,
+        y: 320
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Loving Monsters'],
         ['React, Socket.io, Node.js'],
         ['Online Multiplayer Game / Tool']
     ],
+    fontSize: '.7em',
     popup: {
         title: 'Loving Monsters',
         text: [
