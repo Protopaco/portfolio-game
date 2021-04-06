@@ -3,11 +3,11 @@ export const TacoHouse = {
     type: 'building',
     position: {
         x: 300,
-        y: 460
+        y: 440
     },
     dimension: {
         x: 600,
-        y: 90
+        y: 110
     },
     wordArrays: [
         ['Director Of Operations'],

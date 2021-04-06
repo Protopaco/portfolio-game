@@ -3,11 +3,11 @@ export const Pablitos = {
     type: 'building',
     position: {
         x: 300,
-        y: 660
+        y: 640
     },
     dimension: {
         x: 600,
-        y: 90
+        y: 110
     },
     wordArrays: [
         ['Owner'],

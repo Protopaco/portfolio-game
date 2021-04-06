@@ -1,19 +1,17 @@
-export const ContactPhone = {
-    name: 'Phone',
+export const Resume = {
+    name: 'Resume',
     type: 'building',
     position: {
         x: 100,
-        y: 355
+        y: 100
     },
     dimension: {
         x: 450,
         y: 90
     },
     wordArrays: [
-        ['Phone:'],
-        ['(360) 317-6607']
+        ['Resume: PDF']
     ],
     fontSize: '1em',
-    link: 'tel:3603176607'
-
+    link: 'https://alchezoomy.s3-us-west-2.amazonaws.com/PaulStevensResume.pdf'
 };

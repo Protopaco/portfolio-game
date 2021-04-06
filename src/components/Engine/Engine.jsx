@@ -113,7 +113,6 @@ export default function Engine() {
     };
 
     const handlePopup = (object) => {
-        console.log('🚀 ~ file: Engine.jsx ~ line 114 ~ handlePopup ~ object', object);
 
         if (object) {
             setPopupOpen(true);
@@ -135,6 +134,9 @@ export default function Engine() {
                 idle={idle}
                 playerPosition={playerPosition}
             />
+            <Projectile
+                projectileArray={projectileArray}
+            />
             {buildingArray ?
                 <Buildings
                     buildingArray={buildingArray}
@@ -147,9 +149,6 @@ export default function Engine() {
                     dimension={backButton.dimension}
                     handleBackButton={handleBackButton} />
                 : null}
-            <Projectile
-                projectileArray={projectileArray}
-            />
             {popupOpen ?
                 <Popup
                     handleClosePopup={handleClosePopup}

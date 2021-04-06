@@ -3,11 +3,11 @@ export const NightLight = {
     type: 'building',
     position: {
         x: 300,
-        y: 60
+        y: 40
     },
     dimension: {
         x: 600,
-        y: 90
+        y: 110
     },
     wordArrays: [
         ['Owner'],

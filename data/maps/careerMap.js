@@ -14,8 +14,8 @@ const buildingArray = [BackButton, NightLight, DragBrunch, TacoHouse, Pablitos];
 
 const playerPosition =
 {
-    x: 625,
-    y: 400
+    x: 1125,
+    y: 700
 };
 
 const eyePosition =

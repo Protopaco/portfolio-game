@@ -2,6 +2,7 @@ import { ContactEmail } from '../buildings/ContactEmail/ContactEmail';
 import { ContactGithub } from '../buildings/ContactGithub/ContactGithub';
 import { ContactLinkedIn } from '../buildings/ContactLinkedIn/ContactLinkedIn';
 import { ContactPhone } from '../buildings/ContactPhone/ContactPhone';
+import { Resume } from '../buildings/Resume/Resume';
 
 const BackButton = {
     name: 'Back Button',
@@ -15,6 +16,7 @@ const buildingArray = [
     ContactEmail,
     ContactLinkedIn,
     ContactGithub,
+    Resume,
     BackButton];
 
 

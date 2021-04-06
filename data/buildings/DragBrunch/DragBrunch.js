@@ -3,11 +3,11 @@ export const DragBrunch = {
     type: 'building',
     position: {
         x: 300,
-        y: 260
+        y: 240
     },
     dimension: {
         x: 600,
-        y: 90
+        y: 110
     },
     wordArrays: [
         ['Owner'],

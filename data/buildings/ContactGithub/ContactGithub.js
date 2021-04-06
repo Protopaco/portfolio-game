@@ -3,7 +3,7 @@ export const ContactGithub = {
     type: 'building',
     position: {
         x: 675,
-        y: 625
+        y: 520
     },
     dimension: {
         x: 450,

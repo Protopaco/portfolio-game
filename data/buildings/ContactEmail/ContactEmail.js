@@ -3,14 +3,14 @@ export const ContactEmail = {
     type: 'building',
     position: {
         x: 675,
-        y: 275
+        y: 230
     },
     dimension: {
         x: 450,
         y: 90
     },
     wordArrays: [
-        ['Email', ':'],
+        ['Email:'],
         ['paul.stevens.developer@gmail.com']
     ],
     fontSize: '1em',

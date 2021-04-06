@@ -3,7 +3,7 @@ export const ContactLinkedIn = {
     type: 'building',
     position: {
         x: 100,
-        y: 450
+        y: 655
     },
     dimension: {
         x: 450,

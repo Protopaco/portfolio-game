@@ -17,11 +17,11 @@ a{
 }
 
 .textcontainer {
-        border: 2px solid $yellow;
-        background-color: $darkBlue;
-        color: $yellow;
+        border: 3px solid $yellow;
+        background-color: $background;
+        color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 15px;
+        align-items: center;
 }
