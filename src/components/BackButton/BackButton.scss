@@ -1,0 +1,12 @@
+@import "../../scss/Constants.scss";
+
+.button{
+    position: absolute;
+    border: 3px solid $yellow;
+    color: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}

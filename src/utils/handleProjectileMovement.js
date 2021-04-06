@@ -1,18 +1,24 @@
-import changePosition from '../utils/changePosition';
-import checkCollision from '../utils/collisionChecker';
+import changePosition from './changePosition';
+import checkCollision from './collisionChecker';
 import { wallArray } from '../../data/walls';
-import { buildingWallArray } from '../../data/buildings';
+const projectileSpeed = 25;
 
 export default function handleProjectileMovement(
     direction,
     position,
-    dimension) {
+    dimension,
+    buildingWallArray,
+    eyeCollision,
+    resetEye,
+    eyeStarting) {
 
-    const newPosition = changePosition(position, 20, direction);
+
+    const newPosition = changePosition(position, projectileSpeed, direction);
 
     const objectArray = [
         ...wallArray,
-        ...buildingWallArray
+        ...buildingWallArray.current,
+        eyeCollision
     ];
 
     const collisionResult = checkCollision(
@@ -27,5 +33,7 @@ export default function handleProjectileMovement(
             return 'collision';
         case 'portal':
             return newPosition;
+        case 'npc':
+            resetEye(eyeStarting.current);
     }
 }

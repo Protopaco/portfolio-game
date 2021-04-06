@@ -1,17 +1,17 @@
 import { useRef } from 'react';
-import handleProjectileMovement from './handleProjectileMovement';
+import handleProjectileMovement from '../utils/handleProjectileMovement';
 
 export const useProjectile = () => {
     const projectileArray = useRef([]);
-    const dimension = { x: 5, y: 5 };
+    const dimension = { x: 15, y: 15 };
 
     const fireProjectile = (playerPosition,
         playerDimension,
         playerDirection) => {
 
         const position = {
-            x: playerPosition.current.x - (playerDimension.x / 2),
-            y: playerPosition.current.y,
+            x: playerPosition.current.x + (playerDimension.x / 2),
+            y: playerPosition.current.y + (playerDimension.y / 2),
         };
         const projectile = {
             position,
@@ -21,10 +21,23 @@ export const useProjectile = () => {
         projectileArray.current = projectile;
     };
 
-    const updateProjectiles = () => {
+    const updateProjectiles = (
+        buildingWallArray,
+        eyeCollision,
+        resetEye,
+        eyeStarting) => {
         const { position, direction } = projectileArray.current;
+
+
         if (position) {
-            const newPosition = handleProjectileMovement(direction, position, dimension);
+            const newPosition = handleProjectileMovement(
+                direction,
+                position,
+                dimension,
+                buildingWallArray,
+                eyeCollision,
+                resetEye,
+                eyeStarting);
 
             if (newPosition === 'collision') {
                 projectileArray.current = [];

@@ -1,15 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
-// import { lobbyMap } from '../../../data/maps/lobbyMap';
-// import { contactMap } from '../../../data/maps/contactMap';
 import { useMap } from '../../hooks/useMap';
+import { useEye } from '../../hooks/useEye';
 import handleKeyPress from '../../hooks/handleKeyPress';
 import styles from './Engine.scss';
 import Player from '../Player/Player';
 import Walls from '../Walls/Walls';
 import Buildings from '../Buildings/Buildings';
 import Projectile from '../Projectile/Projectile';
+import Eye from '../Eye/Eye';
+import BackButton from '../BackButton/BackButton';
+import Popup from '../Popup/Popup';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -28,13 +30,23 @@ export default function Engine() {
         projectileArray } = useProjectile();
 
     const {
+        eyePosition,
+        eyeDimension,
+        updateEye,
+        resetEye
+    } = useEye(eyePosition);
+
+    const {
         buildingArray,
         buildingWallArray,
-        changeMap } = useMap(movePlayer);
-
+        changeMap,
+        eyeStarting,
+        backButton } = useMap(movePlayer, resetEye);
 
     const currentKey = useRef('');
     const idle = useRef(true);
+    const [popupOpen, setPopupOpen] = useState(false);
+    const [popupInfo, setPopupInfo] = useState({});
 
     useEffect(() => {
         window.addEventListener('keydown', (e) => {
@@ -48,7 +60,19 @@ export default function Engine() {
         });
 
         setInterval(() => {
-            updateProjectiles();
+            const eyeCollision = {
+                position: eyePosition.current,
+                dimension: eyeDimension,
+                type: 'npc',
+                name: 'eye'
+            };
+
+            updateProjectiles(
+                buildingWallArray,
+                eyeCollision,
+                resetEye,
+                eyeStarting);
+            updateEye(buildingWallArray, playerPosition);
 
             let idleTimeout;
             if (currentKey.current &&
@@ -59,7 +83,7 @@ export default function Engine() {
                 idle.current = false;
                 handleKeyPress(
                     dir,
-                    handlePlayerMove,
+                    movePlayer,
                     playerPosition,
                     playerDimension,
                     changeMap,
@@ -83,23 +107,54 @@ export default function Engine() {
         }, 150);
     }, []);
 
-    const handlePlayerMove = (newPosition) => {
-        movePlayer(newPosition);
+    const handleBackButton = () => {
+        changeMap({ name: 'Lobby-Portal' });
+        setPopupOpen(false);
+    };
+
+    const handlePopup = (object) => {
+
+        if (object) {
+            setPopupOpen(true);
+            setPopupInfo(object);
+        }
+    };
+
+    const handleClosePopup = () => {
+        setPopupOpen(false);
     };
 
     return (
         <div className={styles.container}>
             <Walls />
+            <Eye
+                eyePosition={eyePosition}
+            />
             <Player
                 idle={idle}
                 playerPosition={playerPosition}
             />
-            <Buildings
-                buildingArray={buildingArray}
-            />
             <Projectile
                 projectileArray={projectileArray}
             />
+            {buildingArray ?
+                <Buildings
+                    buildingArray={buildingArray}
+                    handlePopup={handlePopup}
+                />
+                : null}
+            {backButton ?
+                <BackButton
+                    position={backButton.position}
+                    dimension={backButton.dimension}
+                    handleBackButton={handleBackButton} />
+                : null}
+            {popupOpen ?
+                <Popup
+                    handleClosePopup={handleClosePopup}
+                    popupInfo={popupInfo}
+                />
+                : null}
         </div>
     );
 }

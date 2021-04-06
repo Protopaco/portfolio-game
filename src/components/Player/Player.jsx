@@ -30,7 +30,10 @@ export default function Player({ idle, playerPosition }) {
         <div
             className={styles.player}
             style={{
-                transform: `translate3d(${playerPosition.current.x}px, ${playerPosition.current.y}px, 0)`
+                transform: `translate3d(
+                    ${playerPosition.current.x}px, 
+                    ${playerPosition.current.y}px, 
+                    0)`
             }}
         >
             <img src={sprite} />

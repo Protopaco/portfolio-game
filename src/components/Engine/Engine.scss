@@ -1,5 +1,7 @@
+@import "../../scss/Constants.scss";
+
 .container {
-    background-color: #282846;
+    background-color: $background;
     height: 800px;
     width: 1250px;
     position:relative;

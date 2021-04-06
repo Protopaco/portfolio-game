@@ -1,0 +1,74 @@
+Date : 2021-04-04 18:15:32
+Directory : /Users/paulstevens/Developer/portfolio-game/src
+Total : 34 files,  727 codes, 4 comments, 149 blanks, all 880 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         23 |        607 |          4 |        128 |        739 |
+| SCSS       |         10 |        108 |          0 |         17 |        125 |
+| HTML       |          1 |         12 |          0 |          4 |         16 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                  | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                     |         34 |        727 |          4 |        149 |        880 |
+| components                                                                            |         18 |        406 |          0 |         80 |        486 |
+| components/Building                                                                   |          2 |         46 |          0 |         10 |         56 |
+| components/Buildings                                                                  |          1 |         12 |          0 |          3 |         15 |
+| components/Buttons                                                                    |          2 |        106 |          0 |         21 |        127 |
+| components/Engine                                                                     |          2 |         96 |          0 |         16 |        112 |
+| components/Header                                                                     |          2 |         33 |          0 |          7 |         40 |
+| components/Player                                                                     |          2 |         36 |          0 |          7 |         43 |
+| components/Projectile                                                                 |          2 |         31 |          0 |          6 |         37 |
+| components/Walls                                                                      |          2 |         24 |          0 |          5 |         29 |
+| components/app                                                                        |          3 |         22 |          0 |          5 |         27 |
+| containers                                                                            |          2 |         17 |          0 |          3 |         20 |
+| hooks                                                                                 |          6 |        156 |          0 |         39 |        195 |
+| scss                                                                                  |          1 |          2 |          0 |          1 |          3 |
+| utils                                                                                 |          4 |        126 |          4 |         19 |        149 |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                              | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/paulstevens/Developer/portfolio-game/src/components/Building/Building.jsx      | JavaScript |         34 |          0 |          8 |         42 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Building/Building.scss     | SCSS       |         12 |          0 |          2 |         14 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Buildings/Buildings.jsx    | JavaScript |         12 |          0 |          3 |         15 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Buttons/Buttons.jsx        | JavaScript |         62 |          0 |         12 |         74 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Buttons/Buttons.scss       | SCSS       |         44 |          0 |          9 |         53 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Engine/Engine.jsx          | JavaScript |         84 |          0 |         16 |        100 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Engine/Engine.scss         | SCSS       |         12 |          0 |          0 |         12 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Header/Header.jsx          | JavaScript |         18 |          0 |          4 |         22 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Header/Header.scss         | SCSS       |         15 |          0 |          3 |         18 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Player/Player.jsx          | JavaScript |         33 |          0 |          7 |         40 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Player/Player.scss         | SCSS       |          3 |          0 |          0 |          3 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Projectile/Projectile.jsx  | JavaScript |         28 |          0 |          6 |         34 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Projectile/Projectile.scss | SCSS       |          3 |          0 |          0 |          3 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Walls/Walls.jsx            | JavaScript |         18 |          0 |          4 |         22 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/Walls/Walls.scss           | SCSS       |          6 |          0 |          1 |          7 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/app/App.jsx                | JavaScript |          6 |          0 |          2 |          8 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/app/App.scss               | SCSS       |          6 |          0 |          1 |          7 |
+| /Users/paulstevens/Developer/portfolio-game/src/components/app/App.test.jsx           | JavaScript |         10 |          0 |          2 |         12 |
+| /Users/paulstevens/Developer/portfolio-game/src/containers/LandingPage.jsx            | JavaScript |         12 |          0 |          3 |         15 |
+| /Users/paulstevens/Developer/portfolio-game/src/containers/LandingPage.scss           | SCSS       |          5 |          0 |          0 |          5 |
+| /Users/paulstevens/Developer/portfolio-game/src/hooks/handleKeyPress.js               | JavaScript |         32 |          0 |          8 |         40 |
+| /Users/paulstevens/Developer/portfolio-game/src/hooks/handleProjectileMovement.js     | JavaScript |         27 |          0 |          6 |         33 |
+| /Users/paulstevens/Developer/portfolio-game/src/hooks/useCharacter.js                 | JavaScript |         19 |          0 |          6 |         25 |
+| /Users/paulstevens/Developer/portfolio-game/src/hooks/useEvent.js                     | JavaScript |          9 |          0 |          4 |         13 |
+| /Users/paulstevens/Developer/portfolio-game/src/hooks/useMap.js                       | JavaScript |         30 |          0 |          6 |         36 |
+| /Users/paulstevens/Developer/portfolio-game/src/hooks/useProjectile.js                | JavaScript |         39 |          0 |          9 |         48 |
+| /Users/paulstevens/Developer/portfolio-game/src/index.html                            | HTML       |         12 |          0 |          4 |         16 |
+| /Users/paulstevens/Developer/portfolio-game/src/index.js                              | JavaScript |          7 |          0 |          2 |          9 |
+| /Users/paulstevens/Developer/portfolio-game/src/scss/Constants.scss                   | SCSS       |          2 |          0 |          1 |          3 |
+| /Users/paulstevens/Developer/portfolio-game/src/setupTests.js                         | JavaScript |          1 |          0 |          1 |          2 |
+| /Users/paulstevens/Developer/portfolio-game/src/utils/changePosition.js               | JavaScript |         26 |          0 |          5 |         31 |
+| /Users/paulstevens/Developer/portfolio-game/src/utils/collisionChecker.js             | JavaScript |         18 |          4 |          6 |         28 |
+| /Users/paulstevens/Developer/portfolio-game/src/utils/lobbyBuildingWalls.js           | JavaScript |         78 |          0 |          3 |         81 |
+| /Users/paulstevens/Developer/portfolio-game/src/utils/simulateKeyPress.js             | JavaScript |          4 |          0 |          5 |          9 |
+| Total                                                                                 |            |        727 |          4 |        149 |        880 |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
