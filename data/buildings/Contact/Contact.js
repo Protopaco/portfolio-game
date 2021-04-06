@@ -2,12 +2,12 @@ export const Contact = {
     name: 'Contact',
     type: 'building',
     position: {
-        x: 125,
-        y: 100
+        x: 120,
+        y: 80
     },
     dimension: {
-        x: 323,
-        y: 214
+        x: 220,
+        y: 150
     },
     sprite: '/sprites/contact-building2-',
     spriteNum: 1,

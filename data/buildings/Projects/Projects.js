@@ -3,14 +3,13 @@ export const Projects = {
     type: 'building',
     position: {
         x: 800,
-        y: 475
+        y: 370,
     },
     dimension: {
-        x: 323,
-        y: 214
+        x: 220,
+        y: 150
     },
     sprite: '/sprites/projects-building-',
     spriteNum: 1,
     walls: []
-
 };
