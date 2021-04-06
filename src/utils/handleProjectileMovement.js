@@ -34,6 +34,6 @@ export default function handleProjectileMovement(
         case 'portal':
             return newPosition;
         case 'npc':
-            resetEye(eyeStarting);
+            resetEye(eyeStarting.current);
     }
 }

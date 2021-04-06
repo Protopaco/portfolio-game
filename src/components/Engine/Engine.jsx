@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
 import { useMap } from '../../hooks/useMap';
@@ -11,6 +11,7 @@ import Buildings from '../Buildings/Buildings';
 import Projectile from '../Projectile/Projectile';
 import Eye from '../Eye/Eye';
 import BackButton from '../BackButton/BackButton';
+import Popup from '../Popup/Popup';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -28,7 +29,6 @@ export default function Engine() {
         updateProjectiles,
         projectileArray } = useProjectile();
 
-
     const {
         eyePosition,
         eyeDimension,
@@ -45,6 +45,8 @@ export default function Engine() {
 
     const currentKey = useRef('');
     const idle = useRef(true);
+    const [popupOpen, setPopupOpen] = useState(false);
+    const [popupInfo, setPopupInfo] = useState({});
 
     useEffect(() => {
         window.addEventListener('keydown', (e) => {
@@ -107,6 +109,20 @@ export default function Engine() {
 
     const handleBackButton = () => {
         changeMap({ name: 'Lobby-Portal' });
+        setPopupOpen(false);
+    };
+
+    const handlePopup = (object) => {
+        console.log('🚀 ~ file: Engine.jsx ~ line 114 ~ handlePopup ~ object', object);
+
+        if (object) {
+            setPopupOpen(true);
+            setPopupInfo(object);
+        }
+    };
+
+    const handleClosePopup = () => {
+        setPopupOpen(false);
     };
 
     return (
@@ -122,6 +138,7 @@ export default function Engine() {
             {buildingArray ?
                 <Buildings
                     buildingArray={buildingArray}
+                    handlePopup={handlePopup}
                 />
                 : null}
             {backButton ?
@@ -133,6 +150,12 @@ export default function Engine() {
             <Projectile
                 projectileArray={projectileArray}
             />
+            {popupOpen ?
+                <Popup
+                    handleClosePopup={handleClosePopup}
+                    popupInfo={popupInfo}
+                />
+                : null}
         </div>
     );
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Building.scss';
 import Line from '../Line/Line';
 
-export default function Building({ building }) {
+export default function Building({ building, handlePopup }) {
     const frame = useRef(1);
     const { sprite,
         spriteNum,
@@ -10,7 +10,8 @@ export default function Building({ building }) {
         dimension,
         link,
         wordArrays,
-        fontSize } = building;
+        fontSize,
+        popup } = building;
 
     const [currentSprite, setCurrentSprite] = useState(`${sprite}1.png`);
 
@@ -34,7 +35,9 @@ export default function Building({ building }) {
             style={{
                 top: position.y,
                 left: position.x
-            }}>
+            }}
+            onClick={() => handlePopup(popup)}
+        >
             <a href={link} target="_blank" rel="noopener noreferrer">
                 {sprite ?
                     <img src={currentSprite}
