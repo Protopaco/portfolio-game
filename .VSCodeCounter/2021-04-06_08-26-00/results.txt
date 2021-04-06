@@ -1,0 +1,71 @@
+Date : 2021-04-06 08:26:00
+Directory : /Users/paulstevens/Developer/portfolio-game/data
+Total : 26 files,  592 codes, 0 comments, 76 blanks, all 668 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         26 |        592 |          0 |         76 |        668 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                          | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                             |         26 |        592 |          0 |         76 |        668 |
+| buildings                                                                                     |         19 |        402 |          0 |         27 |        429 |
+| buildings/AboutMe                                                                             |          1 |         14 |          0 |          1 |         15 |
+| buildings/AboutMeBlock                                                                        |          1 |         28 |          0 |          2 |         30 |
+| buildings/AlchemyLectures                                                                     |          1 |         27 |          0 |          1 |         28 |
+| buildings/BackButton                                                                          |          1 |          6 |          0 |          1 |          7 |
+| buildings/Career                                                                              |          1 |         15 |          0 |          2 |         17 |
+| buildings/Contact                                                                             |          1 |         15 |          0 |          1 |         16 |
+| buildings/ContactEmail                                                                        |          1 |         18 |          0 |          2 |         20 |
+| buildings/ContactGithub                                                                       |          1 |         18 |          0 |          2 |         20 |
+| buildings/ContactLinkedIn                                                                     |          1 |         18 |          0 |          2 |         20 |
+| buildings/ContactPhone                                                                        |          1 |         18 |          0 |          2 |         20 |
+| buildings/DragBrunch                                                                          |          1 |         28 |          0 |          1 |         29 |
+| buildings/Dwellingly                                                                          |          1 |         27 |          0 |          1 |         28 |
+| buildings/Gibberish                                                                           |          1 |         29 |          0 |          1 |         30 |
+| buildings/LovingMonsters                                                                      |          1 |         28 |          0 |          2 |         30 |
+| buildings/NightLight                                                                          |          1 |         27 |          0 |          1 |         28 |
+| buildings/Pablitos                                                                            |          1 |         28 |          0 |          1 |         29 |
+| buildings/Projects                                                                            |          1 |         15 |          0 |          2 |         17 |
+| buildings/Resume                                                                              |          1 |         17 |          0 |          1 |         18 |
+| buildings/TacoHouse                                                                           |          1 |         26 |          0 |          1 |         27 |
+| maps                                                                                          |          5 |        124 |          0 |         34 |        158 |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                      | language   | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/paulstevens/Developer/portfolio-game/data/buildings.js                                 | JavaScript |         17 |          0 |          7 |         24 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/AboutMe/AboutMe.js                 | JavaScript |         14 |          0 |          1 |         15 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/AboutMeBlock/AboutMeBlock.js       | JavaScript |         28 |          0 |          2 |         30 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/AlchemyLectures/AlchemyLectures.js | JavaScript |         27 |          0 |          1 |         28 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/BackButton/BackButton.js           | JavaScript |          6 |          0 |          1 |          7 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Career/Career.js                   | JavaScript |         15 |          0 |          2 |         17 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Contact/Contact.js                 | JavaScript |         15 |          0 |          1 |         16 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/ContactEmail/ContactEmail.js       | JavaScript |         18 |          0 |          2 |         20 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/ContactGithub/ContactGithub.js     | JavaScript |         18 |          0 |          2 |         20 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/ContactLinkedIn/ContactLinkedIn.js | JavaScript |         18 |          0 |          2 |         20 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/ContactPhone/ContactPhone.js       | JavaScript |         18 |          0 |          2 |         20 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/DragBrunch/DragBrunch.js           | JavaScript |         28 |          0 |          1 |         29 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Dwellingly/Dwellingly.js           | JavaScript |         27 |          0 |          1 |         28 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Gibberish/Gibberish.js             | JavaScript |         29 |          0 |          1 |         30 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/LovingMonsters/LovingMonsters.js   | JavaScript |         28 |          0 |          2 |         30 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/NightLight/NightLight.js           | JavaScript |         27 |          0 |          1 |         28 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Pablitos/Pablitos.js               | JavaScript |         28 |          0 |          1 |         29 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Projects/Projects.js               | JavaScript |         15 |          0 |          2 |         17 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/Resume/Resume.js                   | JavaScript |         17 |          0 |          1 |         18 |
+| /Users/paulstevens/Developer/portfolio-game/data/buildings/TacoHouse/TacoHouse.js             | JavaScript |         26 |          0 |          1 |         27 |
+| /Users/paulstevens/Developer/portfolio-game/data/maps/aboutMeMap.js                           | JavaScript |         18 |          0 |          6 |         24 |
+| /Users/paulstevens/Developer/portfolio-game/data/maps/careerMap.js                            | JavaScript |         23 |          0 |          7 |         30 |
+| /Users/paulstevens/Developer/portfolio-game/data/maps/contactMap.js                           | JavaScript |         30 |          0 |          7 |         37 |
+| /Users/paulstevens/Developer/portfolio-game/data/maps/lobbyMap.js                             | JavaScript |         27 |          0 |          9 |         36 |
+| /Users/paulstevens/Developer/portfolio-game/data/maps/projectsMap.js                          | JavaScript |         26 |          0 |          5 |         31 |
+| /Users/paulstevens/Developer/portfolio-game/data/walls.js                                     | JavaScript |         49 |          0 |          8 |         57 |
+| Total                                                                                         |            |        592 |          0 |         76 |        668 |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

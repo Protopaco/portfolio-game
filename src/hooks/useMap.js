@@ -11,6 +11,7 @@ export const useMap = (movePlayer, resetEye) => {
     const buildingWallArray = useRef(lobbyMap.buildingWallArray);
     const eyeStarting = useRef(lobbyMap.eyePosition);
     const [backButton, setBackButton] = useState(null);
+    const [marqueeText, setMarqueeText] = useState(lobbyMap.marqueeText);
 
     const changeMap = ({ name }) => {
         console.log(name);
@@ -22,6 +23,7 @@ export const useMap = (movePlayer, resetEye) => {
                 resetEye(lobbyMap.eyePosition);
                 eyeStarting.current = lobbyMap.eyePosition;
                 setBackButton(null);
+                setMarqueeText(lobbyMap.marqueeText);
                 break;
             case 'Contact-Portal':
                 movePlayer(contactMap.playerPosition);
@@ -30,6 +32,7 @@ export const useMap = (movePlayer, resetEye) => {
                 resetEye(contactMap.eyePosition);
                 eyeStarting.current = contactMap.eyePosition;
                 setBackButton(contactMap.BackButton);
+                setMarqueeText(contactMap.marqueeText);
                 break;
 
             case 'About-Me-Portal':
@@ -39,6 +42,7 @@ export const useMap = (movePlayer, resetEye) => {
                 resetEye(aboutMeMap.eyePosition);
                 eyeStarting.current = aboutMeMap.eyePosition;
                 setBackButton(aboutMeMap.BackButton);
+                setMarqueeText(aboutMeMap.marqueeText);
                 break;
             case 'Career-Portal':
                 movePlayer(careerMap.playerPosition);
@@ -47,6 +51,7 @@ export const useMap = (movePlayer, resetEye) => {
                 resetEye(careerMap.eyePosition);
                 eyeStarting.current = careerMap.eyePosition;
                 setBackButton(careerMap.BackButton);
+                setMarqueeText(careerMap.marqueeText);
                 break;
             case 'Projects-Portal':
                 movePlayer(projectsMap.playerPosition);
@@ -55,6 +60,8 @@ export const useMap = (movePlayer, resetEye) => {
                 resetEye(projectsMap.eyePosition);
                 eyeStarting.current = projectsMap.eyePosition;
                 setBackButton(projectsMap.BackButton);
+                setMarqueeText(projectsMap.marqueeText);
+
                 break;
 
         }
@@ -66,6 +73,7 @@ export const useMap = (movePlayer, resetEye) => {
         buildingArray,
         eyeStarting,
         changeMap,
-        backButton
+        backButton,
+        marqueeText
     };
 };

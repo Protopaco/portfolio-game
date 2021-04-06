@@ -25,12 +25,13 @@ export const useProjectile = () => {
         buildingWallArray,
         eyeCollision,
         resetEye,
-        eyeStarting) => {
+        eyeStarting,
+        handlePopup,
+        handleBackButton) => {
         const { position, direction } = projectileArray.current;
 
-
         if (position) {
-            const newPosition = handleProjectileMovement(
+            const collisionResult = handleProjectileMovement(
                 direction,
                 position,
                 dimension,
@@ -39,10 +40,18 @@ export const useProjectile = () => {
                 resetEye,
                 eyeStarting);
 
-            if (newPosition === 'collision') {
+            if (collisionResult.cType === 'collision') {
                 projectileArray.current = [];
+                if (collisionResult.popup) {
+                    handlePopup(collisionResult.popup);
+                } else if (collisionResult.name === 'BackButton') {
+                    handleBackButton();
+                } else if (collisionResult.link) {
+                    window.open(collisionResult.link, '_blank');
+                }
+
             } else {
-                projectileArray.current.position = newPosition;
+                projectileArray.current.position = collisionResult.newPosition;
             }
         }
 

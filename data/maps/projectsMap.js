@@ -12,8 +12,8 @@ const buildingArray = [
     BackButton];
 
 const playerPosition = {
-    x: 625,
-    y: 400
+    x: 1000,
+    y: 600
 };
 
 const eyePosition = {
@@ -21,10 +21,14 @@ const eyePosition = {
     y: 50
 };
 
+const marqueeText = 'Click on the links to see more about the cool stuff I\'ve been made!   ';
+
+
 export const projectsMap = {
     buildingWallArray: buildingArray,
     buildingArray,
     playerPosition,
     eyePosition,
-    BackButton
+    BackButton,
+    marqueeText
 };

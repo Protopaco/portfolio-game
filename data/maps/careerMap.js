@@ -19,11 +19,15 @@ const eyePosition =
     y: 50
 };
 
+const marqueeText = 'Look at all of my cool experiences! Shoot the boxes to interact.   ';
+
+
 export const careerMap = {
     buildingWallArray: buildingArray,
     buildingArray,
     playerPosition,
     eyePosition,
-    BackButton
+    BackButton,
+    marqueeText
 };
 
