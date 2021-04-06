@@ -27,13 +27,17 @@ export default function handleProjectileMovement(
         dimension);
 
     switch (collisionResult.type) {
+
         case false:
-            return newPosition;
+            return { cType: 'none', newPosition };
         case 'object':
-            return 'collision';
+            return { cType: 'collision', ...collisionResult };
         case 'portal':
-            return newPosition;
+            return { cType: 'collision', ...collisionResult };
+        case 'building':
+            return { cType: 'collision', ...collisionResult };
         case 'npc':
             resetEye(eyeStarting.current);
+            return { cType: 'collision', ...collisionResult };
     }
 }

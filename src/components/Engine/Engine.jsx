@@ -3,7 +3,7 @@ import { useCharacter } from '../../hooks/useCharacter';
 import { useProjectile } from '../../hooks/useProjectile';
 import { useMap } from '../../hooks/useMap';
 import { useEye } from '../../hooks/useEye';
-import handleKeyPress from '../../hooks/handleKeyPress';
+import handleKeyPress from '../../utils/handleKeyPress';
 import styles from './Engine.scss';
 import Player from '../Player/Player';
 import Walls from '../Walls/Walls';
@@ -12,6 +12,7 @@ import Projectile from '../Projectile/Projectile';
 import Eye from '../Eye/Eye';
 import BackButton from '../BackButton/BackButton';
 import Popup from '../Popup/Popup';
+import MarqueeBox from '../MarqueeBox/MarqueeBox';
 
 const movementKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 
@@ -33,20 +34,36 @@ export default function Engine() {
         eyePosition,
         eyeDimension,
         updateEye,
-        resetEye
-    } = useEye(eyePosition);
+        resetEye } = useEye(eyePosition);
 
     const {
         buildingArray,
         buildingWallArray,
         changeMap,
         eyeStarting,
-        backButton } = useMap(movePlayer, resetEye);
+        backButton,
+        marqueeText } = useMap(movePlayer, resetEye);
 
     const currentKey = useRef('');
     const idle = useRef(true);
     const [popupOpen, setPopupOpen] = useState(false);
     const [popupInfo, setPopupInfo] = useState({});
+
+    const handleBackButton = () => {
+        changeMap({ name: 'Lobby-Portal' });
+        setPopupOpen(false);
+    };
+
+    const handlePopup = (object) => {
+        if (object) {
+            setPopupInfo(object);
+            setPopupOpen(true);
+        }
+    };
+
+    const handleClosePopup = () => {
+        setPopupOpen(false);
+    };
 
     useEffect(() => {
         window.addEventListener('keydown', (e) => {
@@ -71,7 +88,10 @@ export default function Engine() {
                 buildingWallArray,
                 eyeCollision,
                 resetEye,
-                eyeStarting);
+                eyeStarting,
+                handlePopup,
+                handleBackButton);
+
             updateEye(buildingWallArray, playerPosition);
 
             let idleTimeout;
@@ -92,6 +112,7 @@ export default function Engine() {
                 clearTimeout(idleTimeout);
 
             } else if (currentKey.current === ' ') {
+                setPopupOpen(false);
                 idle.current = false;
                 currentKey.current = '';
                 fireProjectile(
@@ -107,26 +128,14 @@ export default function Engine() {
         }, 150);
     }, []);
 
-    const handleBackButton = () => {
-        changeMap({ name: 'Lobby-Portal' });
-        setPopupOpen(false);
-    };
 
-    const handlePopup = (object) => {
-
-        if (object) {
-            setPopupOpen(true);
-            setPopupInfo(object);
-        }
-    };
-
-    const handleClosePopup = () => {
-        setPopupOpen(false);
-    };
 
     return (
         <div className={styles.container}>
             <Walls />
+            <MarqueeBox
+                marqueeText={marqueeText}
+            />
             <Eye
                 eyePosition={eyePosition}
             />

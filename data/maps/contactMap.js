@@ -27,10 +27,13 @@ const eyePosition =
     y: 50
 };
 
+const marqueeText = 'I\'d love to hear from you! Shoot the boxes to interact.   ';
+
 export const contactMap = {
     buildingWallArray: buildingArray,
     buildingArray,
     playerPosition,
     eyePosition,
-    BackButton
+    BackButton,
+    marqueeText
 };

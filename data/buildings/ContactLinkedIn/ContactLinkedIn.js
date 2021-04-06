@@ -15,5 +15,4 @@ export const ContactLinkedIn = {
     ],
     fontSize: '1em',
     link: 'https://www.linkedin.com/in/paul-stevens-dev/'
-
 };

@@ -26,10 +26,12 @@ const eyePosition =
     y: 50
 };
 
+const marqueeText = 'Welcome to my portfolio! Use the arrow keys or buttons to move.   ';
 
 export const lobbyMap = {
     buildingWallArray,
     buildingArray,
     playerPosition,
-    eyePosition
+    eyePosition,
+    marqueeText
 };

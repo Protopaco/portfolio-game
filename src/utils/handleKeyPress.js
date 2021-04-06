@@ -1,5 +1,5 @@
-import changePosition from '../utils/changePosition';
-import checkCollision from '../utils/collisionChecker';
+import changePosition from './changePosition';
+import checkCollision from './collisionChecker';
 import { wallArray } from '../../data/walls';
 const playerSpeed = 20;
 
@@ -27,10 +27,6 @@ export default function handleKeyPress(
     switch (collisionResult.type) {
         case false:
             movePlayer(newPosition);
-            break;
-        case 'object':
-            console.log(collisionResult);
-
             break;
         case 'portal':
             changeMap(collisionResult);
