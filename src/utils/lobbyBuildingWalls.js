@@ -68,7 +68,7 @@ export default function lobbyBuildingWalls({ name, position, dimension }) {
             type: 'portal',
             position: {
                 x: position.x + (dimension.x / 3),
-                y: position.y + dimension.y - wallLength - 100
+                y: position.y + dimension.y - wallLength - 75
             },
             dimension: {
                 x: dimension.x / 3,

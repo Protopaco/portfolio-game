@@ -1,3 +1,4 @@
+import { wallWidth, engineHeight, engineWidth } from '../src/sizeConstants';
 
 const WestWall = {
     name: 'Westwall',
@@ -7,8 +8,8 @@ const WestWall = {
         y: 0,
     },
     dimension: {
-        x: 10,
-        y: 800
+        x: wallWidth,
+        y: engineHeight
     }
 };
 
@@ -20,8 +21,8 @@ const NorthWall = {
         y: 0
     },
     dimension: {
-        x: 1250,
-        y: 10
+        x: engineWidth,
+        y: wallWidth
     }
 
 
@@ -31,12 +32,12 @@ const EastWall = {
     name: 'EastWall',
     type: 'object',
     position: {
-        x: 1240,
+        x: engineWidth - wallWidth,
         y: 0
     },
     dimension: {
-        x: 10,
-        y: 800
+        x: wallWidth,
+        y: engineHeight
     }
 };
 
@@ -45,11 +46,11 @@ const SouthWall = {
     type: 'object',
     position: {
         x: 0,
-        y: 800,
+        y: engineHeight,
     },
     dimension: {
-        x: 1250,
-        y: 10
+        x: engineWidth,
+        y: wallWidth
     }
 };
 

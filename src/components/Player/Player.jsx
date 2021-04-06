@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Player.scss';
 
-export default function Player({ idle, playerPosition }) {
+export default function Player({ idle, playerPosition, playerDirection }) {
     const frame = useRef(1);
-    const [sprite, setSprite] = useState('/sprites/robo-run/robo-run-1.png');
+    const [sprite, setSprite] = useState('/sprites/robo-run/robo-right-run-1.png');
+    const [spriteDirection, setSpriteDirection] = useState('right');
 
     useEffect(() => {
         setInterval(() => {
@@ -17,13 +18,19 @@ export default function Player({ idle, playerPosition }) {
     }, []);
 
     const runAnimation = () => {
-        frame.current < 4 ? frame.current = frame.current + 1 : frame.current = 1;
-        setSprite(`/sprites/robo-run/robo-run-${frame.current}.png`);
+        frame.current < 3 ? frame.current = frame.current + 1 : frame.current = 1;
+        if (playerDirection.current === 'right' || playerDirection.current === 'left') {
+            setSpriteDirection(playerDirection.current);
+        }
+        setSprite(`/sprites/robo-run/robo-${spriteDirection}-run-${frame.current}.png`);
     };
 
     const idleAnimation = () => {
-        frame.current < 9 ? frame.current = frame.current + 1 : frame.current = 1;
-        setSprite(`/sprites/robo-idle/robo-idle-${frame.current}.png`);
+        frame.current < 3 ? frame.current = frame.current + 1 : frame.current = 1;
+        if (playerDirection.current === 'right' || playerDirection.current === 'left') {
+            setSpriteDirection(playerDirection.current);
+        }
+        setSprite(`/sprites/robo-idle/robo-${spriteDirection}-idle-${frame.current}.png`);
     };
 
     return (

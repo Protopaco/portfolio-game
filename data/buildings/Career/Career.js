@@ -2,12 +2,12 @@ export const Career = {
     name: 'Career',
     type: 'building',
     position: {
-        x: 800,
-        y: 100
+        x: 900,
+        y: 80
     },
     dimension: {
-        x: 323,
-        y: 214
+        x: 220,
+        y: 150
     },
     sprite: '/sprites/career-building-',
     spriteNum: 1,
