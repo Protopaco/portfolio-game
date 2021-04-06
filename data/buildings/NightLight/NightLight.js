@@ -2,19 +2,19 @@ export const NightLight = {
     name: 'NightLight',
     type: 'building',
     position: {
-        x: 300,
+        x: 370,
         y: 40
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Owner'],
         ['Night Light Lounge'],
         ['2017 - 2020']
     ],
-    fontSize: '1em',
+    fontSize: '.7em',
     popup: {
         title: 'Night Light Lounge',
         text: [

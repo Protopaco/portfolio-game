@@ -2,18 +2,19 @@ export const AlchemyLectures = {
     name: 'AlchemyLectures',
     type: 'building',
     position: {
-        x: 300,
-        y: 250
+        x: 370,
+        y: 180
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Alchemy Lectures'],
         ['React, Node.js, PostgresSQL'],
         ['In Beta Testing']
     ],
+    fontSize: '.7em',
     popup: {
         title: 'Alchemy Lectures',
         text: [

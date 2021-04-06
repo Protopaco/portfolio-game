@@ -23,11 +23,11 @@ const playerPosition =
 
 const eyePosition =
 {
-    x: 50,
+    x: 950,
     y: 50
 };
 
-const marqueeText = 'I\'d love to hear from you! Shoot the boxes to interact.   ';
+const marqueeText = 'I\'d love to hear from you! Shoot or click the boxes to interact.   ';
 
 export const contactMap = {
     buildingWallArray: buildingArray,

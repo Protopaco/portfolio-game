@@ -2,19 +2,19 @@ export const DragBrunch = {
     name: 'DragBrunch',
     type: 'building',
     position: {
-        x: 300,
-        y: 240
+        x: 370,
+        y: 180
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Owner'],
         ['Portland Drag Queen Brunch'],
         ['2018 - 2020']
     ],
-    fontSize: '1em',
+    fontSize: '.7em',
     popup: {
         title: 'Portland Drag Queen Brunch',
         text: [

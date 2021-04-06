@@ -2,19 +2,19 @@ export const Gibberish = {
     name: 'Gibberish',
     type: 'building',
     position: {
-        x: 300,
+        x: 370,
         y: 40
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Gibberish'],
         ['React, Socket.io, Node.js'],
         ['HackOR Best UI/UX, 3rd Overall']
     ],
-    fontSize: '1em',
+    fontSize: '.7em',
     popup: {
         title: 'Gibberish',
         text: [

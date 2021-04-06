@@ -2,19 +2,19 @@ export const TacoHouse = {
     name: 'TacoHouse',
     type: 'building',
     position: {
-        x: 300,
-        y: 440
+        x: 370,
+        y: 320
     },
     dimension: {
-        x: 600,
-        y: 110
+        x: 500,
+        y: 80
     },
     wordArrays: [
         ['Director Of Operations'],
         ['The Original Taco House'],
         ['2015 - 2017']
     ],
-    fontSize: '1em',
+    fontSize: '.7em',
     popup: {
         title: 'The Original Taco House',
         text: [

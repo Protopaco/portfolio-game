@@ -12,16 +12,16 @@ const buildingArray = [
     BackButton];
 
 const playerPosition = {
-    x: 1000,
-    y: 600
+    x: 60,
+    y: 60
 };
 
 const eyePosition = {
     x: 50,
-    y: 50
+    y: 550
 };
 
-const marqueeText = 'Click on the links to see more about the cool stuff I\'ve been made!   ';
+const marqueeText = 'Click on the links to see more about the cool stuff I\'ve been made!  Many thanks to my teammates!   ';
 
 
 export const projectsMap = {
