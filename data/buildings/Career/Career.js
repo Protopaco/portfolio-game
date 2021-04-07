@@ -9,8 +9,7 @@ export const Career = {
         x: 220,
         y: 150
     },
-    sprite: '/sprites/career-building-',
-    spriteNum: 1,
+    sprite: '/sprites/career-building-1.png',
     map: 'Career-Portal'
 
 };

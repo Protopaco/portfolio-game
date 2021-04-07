@@ -9,7 +9,6 @@ export const AboutMe = {
         x: 220,
         y: 150
     },
-    sprite: '/sprites/about-me-building-',
-    spriteNum: 1,
+    sprite: '/sprites/about-me-building-1.png',
     map: 'About-Me-Portal'
 };

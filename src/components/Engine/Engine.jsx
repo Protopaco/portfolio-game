@@ -114,6 +114,7 @@ export default function Engine() {
 
             } else if (currentKey.current === ' ') {
                 setPopupOpen(false);
+
                 idle.current = false;
                 currentKey.current = '';
                 fireProjectile(
@@ -140,13 +141,13 @@ export default function Engine() {
                 eyePosition={eyePosition}
                 eyeDirection={eyeDirection}
             />
+            <Projectile
+                projectileArray={projectileArray}
+            />
             <Player
                 idle={idle}
                 playerPosition={playerPosition}
                 playerDirection={playerDirection}
-            />
-            <Projectile
-                projectileArray={projectileArray}
             />
             {buildingArray ?
                 <Buildings
