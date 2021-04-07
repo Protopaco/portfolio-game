@@ -26,7 +26,7 @@ const eyePosition =
     y: 50
 };
 
-const marqueeText = 'Welcome to my portfolio! Use the arrow keys or buttons to explore.  Enjoy!   ';
+const marqueeText = 'Welcome to my portfolio! Thank you for stopping by!  Use the arrow keys or buttons to explore.  Enjoy!   ';
 
 export const lobbyMap = {
     buildingWallArray,
