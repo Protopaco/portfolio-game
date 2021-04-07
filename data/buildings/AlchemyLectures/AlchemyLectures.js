@@ -14,7 +14,7 @@ export const AlchemyLectures = {
         ['React, Node.js, PostgresSQL'],
         ['In Beta Testing']
     ],
-    fontSize: '.7em',
+    fontSize: '.6em',
     popup: {
         title: 'Alchemy Lectures',
         text: [

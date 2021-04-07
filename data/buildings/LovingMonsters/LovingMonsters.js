@@ -14,7 +14,7 @@ export const LovingMonsters = {
         ['React, Socket.io, Node.js'],
         ['Online Multiplayer Game / Tool']
     ],
-    fontSize: '.7em',
+    fontSize: '.6em',
     popup: {
         title: 'Loving Monsters',
         text: [
