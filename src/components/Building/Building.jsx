@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Building.scss';
 import Line from '../Line/Line';
 
-export default function Building({ building, handlePopup }) {
+export default function Building({ building, handlePopup, changeMap }) {
     const frame = useRef(1);
     const { sprite,
         spriteNum,
@@ -11,7 +11,8 @@ export default function Building({ building, handlePopup }) {
         link,
         wordArrays,
         fontSize,
-        popup } = building;
+        popup,
+        map } = building;
 
     const [currentSprite, setCurrentSprite] = useState(`${sprite}1.png`);
 
@@ -36,7 +37,15 @@ export default function Building({ building, handlePopup }) {
                 top: position.y,
                 left: position.x
             }}
-            onClick={() => handlePopup(popup)}
+            onClick={() => {
+                console.log();
+                if (map) {
+                    changeMap({ name: map });
+                }
+                else {
+                    handlePopup(popup);
+                }
+            }}
         >
             <a href={link}
                 target="_blank"

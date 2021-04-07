@@ -3,6 +3,7 @@ import { Projects } from '../buildings/Projects/Projects';
 import { Contact } from '../buildings/Contact/Contact';
 import { Career } from '../buildings/Career/Career';
 import lobbyBuildingWalls from '../../src/utils/lobbyBuildingWalls';
+const tab = '   ';
 
 
 const reducer = (accumulator, building) => {
@@ -26,7 +27,7 @@ const eyePosition =
     y: 50
 };
 
-const marqueeText = 'Welcome to my portfolio! Thank you for stopping by!  Use the arrow keys or buttons to explore.  Enjoy!   ';
+const marqueeText = 'Welcome to my portfolio!   Thank you for stopping by! Use the arrow keys to explore, spacebar to shoot!';
 
 export const lobbyMap = {
     buildingWallArray,

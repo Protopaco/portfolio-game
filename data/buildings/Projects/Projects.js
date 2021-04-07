@@ -11,5 +11,5 @@ export const Projects = {
     },
     sprite: '/sprites/projects-building-',
     spriteNum: 1,
-    walls: []
+    map: 'Projects-Portal'
 };

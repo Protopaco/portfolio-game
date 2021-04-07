@@ -152,6 +152,7 @@ export default function Engine() {
                 <Buildings
                     buildingArray={buildingArray}
                     handlePopup={handlePopup}
+                    changeMap={changeMap}
                 />
                 : null}
             {backButton ?

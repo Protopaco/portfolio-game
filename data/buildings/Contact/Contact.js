@@ -11,5 +11,5 @@ export const Contact = {
     },
     sprite: '/sprites/contact-building2-',
     spriteNum: 1,
-    walls: []
+    map: 'Contact-Portal'
 };
