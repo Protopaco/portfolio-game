@@ -14,7 +14,7 @@ export const Dwellingly = {
         ['React, Python'],
         ['Code For PDX']
     ],
-    fontSize: '.7em',
+    fontSize: '.6em',
     popup: {
         title: 'Dwellingly',
         text: [

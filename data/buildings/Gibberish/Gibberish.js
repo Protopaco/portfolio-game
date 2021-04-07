@@ -14,7 +14,7 @@ export const Gibberish = {
         ['React, Socket.io, Node.js'],
         ['Won HackOR\'s Best UI/UX, 3rd Overall']
     ],
-    fontSize: '.7em',
+    fontSize: '.6em',
     popup: {
         title: 'Gibberish',
         text: [
