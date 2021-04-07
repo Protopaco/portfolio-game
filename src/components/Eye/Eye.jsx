@@ -3,7 +3,7 @@ import styles from './Eye.scss';
 
 export default function Eye({ eyePosition, eyeDirection }) {
     const frame = useRef(1);
-    const [sprite, setSprite] = useState('/sprites/eye-run/eye-run-1.png');
+    const [sprite, setSprite] = useState('/sprites/eye-run/eye-right-run-1.png');
     const spriteDirection = useRef('right');
 
     useEffect(() => {

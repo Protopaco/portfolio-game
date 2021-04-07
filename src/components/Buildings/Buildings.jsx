@@ -1,7 +1,7 @@
 import React from 'react';
 import Building from '../Building/Building';
 
-export default function Buildings({ handlePopup, buildingArray }) {
+export default function Buildings({ handlePopup, buildingArray, changeMap }) {
 
     return buildingArray.map(building => {
         return (
@@ -9,6 +9,7 @@ export default function Buildings({ handlePopup, buildingArray }) {
                 key={building.name}
                 building={building}
                 handlePopup={handlePopup}
+                changeMap={changeMap}
             />
         );
     });

@@ -11,6 +11,6 @@ export const Career = {
     },
     sprite: '/sprites/career-building-',
     spriteNum: 1,
-    walls: []
+    map: 'Career-Portal'
 
 };

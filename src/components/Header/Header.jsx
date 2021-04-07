@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.scss';
 import Buttons from '../Buttons/Buttons';
-import headerHeight from '../../sizeConstants';
+import { headerHeight } from '../../sizeConstants';
 
 export default function Header() {
 
