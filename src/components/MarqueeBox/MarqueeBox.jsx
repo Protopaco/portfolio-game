@@ -4,7 +4,6 @@ import React from 'react';
 import { wallWidth, engineWidth, engineHeight, headerHeight } from '../../sizeConstants';
 
 export default function MarqueeBox({ marqueeText }) {
-    console.log(marqueeText);
     return (
         <div
             className={styles.container}

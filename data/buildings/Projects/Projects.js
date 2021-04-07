@@ -9,7 +9,6 @@ export const Projects = {
         x: 220,
         y: 150
     },
-    sprite: '/sprites/projects-building-',
-    spriteNum: 1,
+    sprite: '/sprites/projects-building-1.png',
     map: 'Projects-Portal'
 };

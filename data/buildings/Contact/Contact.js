@@ -9,7 +9,6 @@ export const Contact = {
         x: 220,
         y: 150
     },
-    sprite: '/sprites/contact-building2-',
-    spriteNum: 1,
+    sprite: '/sprites/contact-building2-1.png',
     map: 'Contact-Portal'
 };
