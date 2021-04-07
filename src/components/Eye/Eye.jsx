@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Eye.scss';
 
-export default function Eye({ eyePosition }) {
+export default function Eye({ eyePosition, eyeDirection }) {
     const frame = useRef(1);
     const [sprite, setSprite] = useState('/sprites/eye-run/eye-run-1.png');
+    const spriteDirection = useRef('right');
 
     useEffect(() => {
         setInterval(() => {
@@ -13,7 +14,10 @@ export default function Eye({ eyePosition }) {
 
     const runAnimation = () => {
         frame.current < 4 ? frame.current = frame.current + 1 : frame.current = 1;
-        setSprite(`/sprites/eye-run/eye-run-${frame.current}.png`);
+        if (eyeDirection.current === 'left' || eyeDirection.current === 'right') {
+            spriteDirection.current = eyeDirection.current;
+        }
+        setSprite(`/sprites/eye-run/eye-${spriteDirection.current}-run-${frame.current}.png`);
     };
 
     return (

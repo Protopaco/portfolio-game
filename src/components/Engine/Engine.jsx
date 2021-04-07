@@ -33,6 +33,7 @@ export default function Engine() {
     const {
         eyePosition,
         eyeDimension,
+        eyeDirection,
         updateEye,
         resetEye } = useEye(eyePosition);
 
@@ -137,6 +138,7 @@ export default function Engine() {
             />
             <Eye
                 eyePosition={eyePosition}
+                eyeDirection={eyeDirection}
             />
             <Player
                 idle={idle}

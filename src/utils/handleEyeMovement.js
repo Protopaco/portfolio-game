@@ -28,7 +28,10 @@ export default function handleEyeMovement(
         eyeDimension
     );
 
-    if (collisionResult.type === false) return newPosition;
+    if (collisionResult.type === false) return {
+        direction: firstChoice,
+        newPosition
+    };
 
     newPosition = changePosition(eyePosition, eyeSpeed, secondChoice);
 
@@ -38,7 +41,10 @@ export default function handleEyeMovement(
         eyeDimension
     );
 
-    if (collisionResult.type === false) return newPosition;
+    if (collisionResult.type === false) return {
+        direction: secondChoice,
+        newPosition
+    };
 
     return 'collision';
 
