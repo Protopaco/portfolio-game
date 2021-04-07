@@ -12,7 +12,7 @@ export const LovingMonsters = {
     wordArrays: [
         ['Loving Monsters'],
         ['React, Socket.io, Node.js'],
-        ['Online Multiplayer Game / Tool']
+        ['Online Multiplayer Game/Tool']
     ],
     fontSize: '.6em',
     popup: {
