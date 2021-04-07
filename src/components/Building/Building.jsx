@@ -59,9 +59,9 @@ export default function Building({ building, handlePopup }) {
                             fontSize
                         }}
                     >
-                        {wordArrays.map(line => <Line
+                        {wordArrays.map((line, index) => <Line
                             line={line}
-                            key={line} />)}
+                            key={index + line} />)}
                     </div>
                     : null
                 }

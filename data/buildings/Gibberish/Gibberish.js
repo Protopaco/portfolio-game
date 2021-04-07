@@ -12,7 +12,7 @@ export const Gibberish = {
     wordArrays: [
         ['Gibberish'],
         ['React, Socket.io, Node.js'],
-        ['HackOR Best UI/UX, 3rd Overall']
+        ['Won HackOR\'s Best UI/UX, 3rd Overall']
     ],
     fontSize: '.7em',
     popup: {
