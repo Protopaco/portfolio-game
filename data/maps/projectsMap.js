@@ -21,7 +21,7 @@ const eyePosition = {
     y: 550
 };
 
-const marqueeText = ['Click on the links to see more about the cool stuff I\'ve been made!', 'Many thanks to my awesome teammates on these projects!'];
+const marqueeText = ['Click on the links to see more about the cool stuff I\'ve been made!', 'Many thanks to my awesome teammates!'];
 
 
 export const projectsMap = {

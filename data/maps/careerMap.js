@@ -19,7 +19,7 @@ const eyePosition =
     y: 50
 };
 
-const marqueeText = ['Look at all of my cool experience!', 'Think about the value I could bring to your team!', 'Shoot or click the boxes to find out more!'];
+const marqueeText = ['Look at all of my cool experience!', 'Shoot or click the boxes to find out more!'];
 
 
 export const careerMap = {
