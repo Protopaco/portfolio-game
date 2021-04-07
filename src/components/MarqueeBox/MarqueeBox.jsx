@@ -15,7 +15,7 @@ export default function MarqueeBox({ marqueeText }) {
             < Marquee
                 gradient={false} >
                 <div className={styles.text}>
-                    {marqueeText}
+                    {marqueeText.map(line => <span>{line}</span>)}
                 </div>
             </Marquee>
         </ div>

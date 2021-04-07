@@ -27,7 +27,7 @@ const eyePosition =
     y: 50
 };
 
-const marqueeText = 'Welcome to my portfolio!   Thank you for stopping by! Use the arrow keys to explore, spacebar to shoot!';
+const marqueeText = ['Welcome to my portfolio!', 'Thank you for stopping by!', 'Use the arrow keys to explore, spacebar to shoot!'];
 
 export const lobbyMap = {
     buildingWallArray,

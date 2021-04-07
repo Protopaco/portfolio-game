@@ -13,7 +13,7 @@ const eyePosition = {
     y: 500
 };
 
-const marqueeText = 'Blah Blah Blah, who wants to hear me talk about myself?   ';
+const marqueeText = ['Blah Blah Blah', 'Who wants to hear me talk about myself?'];
 
 
 export const aboutMeMap = {

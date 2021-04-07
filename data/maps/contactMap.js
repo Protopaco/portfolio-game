@@ -27,7 +27,7 @@ const eyePosition =
     y: 50
 };
 
-const marqueeText = 'I\'d love to hear from you! Shoot or click the boxes to interact.   ';
+const marqueeText = ['I\'d love to hear from you!', 'Shoot or click the boxes to interact.'];
 
 export const contactMap = {
     buildingWallArray: buildingArray,
