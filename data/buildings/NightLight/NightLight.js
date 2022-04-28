@@ -3,7 +3,7 @@ export const NightLight = {
     type: 'building',
     position: {
         x: 370,
-        y: 40
+        y: 180
     },
     dimension: {
         x: 500,

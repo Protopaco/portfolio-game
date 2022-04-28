@@ -3,7 +3,7 @@ export const TacoHouse = {
     type: 'building',
     position: {
         x: 370,
-        y: 320
+        y: 460
     },
     dimension: {
         x: 500,
