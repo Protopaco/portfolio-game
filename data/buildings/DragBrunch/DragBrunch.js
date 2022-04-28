@@ -3,7 +3,7 @@ export const DragBrunch = {
     type: 'building',
     position: {
         x: 370,
-        y: 180
+        y: 320
     },
     dimension: {
         x: 500,

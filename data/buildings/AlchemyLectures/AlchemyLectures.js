@@ -12,7 +12,6 @@ export const AlchemyLectures = {
     wordArrays: [
         ['Alchemy Lectures'],
         ['React, Node.js, PostgresSQL'],
-        ['In Beta Testing']
     ],
     fontSize: '.6em',
     popup: {
@@ -22,7 +21,6 @@ export const AlchemyLectures = {
             'I am responsible for all design and execution',
             'Currently in testing'
         ],
-        website: 'https://www.alchemylectures.com',
         github: 'https://github.com/Alchezoomy2',
     }
 };

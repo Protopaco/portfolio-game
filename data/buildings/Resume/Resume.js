@@ -13,5 +13,5 @@ export const Resume = {
         ['Resume: PDF']
     ],
     fontSize: '.7em',
-    link: 'https://alchezoomy.s3-us-west-2.amazonaws.com/PaulStevensResume.pdf'
+    link: '/PaulStevensResume.pdf'
 };
