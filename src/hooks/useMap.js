@@ -14,7 +14,6 @@ export const useMap = (movePlayer, resetEye) => {
     const [marqueeText, setMarqueeText] = useState(lobbyMap.marqueeText);
 
     const changeMap = ({ name }) => {
-        console.log(name);
         switch (name) {
             case 'Lobby-Portal':
                 movePlayer(lobbyMap.playerPosition);
